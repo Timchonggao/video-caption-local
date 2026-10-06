@@ -1,0 +1,172 @@
+[
+  {
+    "video_id": "6b42d41b-90b7-2111-2e9b-d3b5e77e50b2",
+    "bold_mark": "Organize cables on the shelf",
+    "sst": "industry/electronics_factory/other/daily_work",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "end_time_s": 179.5,
+        "fine_label": "Sort out the cables",
+        "end_frame": 5385,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "end_time_s": 11.0,
+            "fine_label": "Organize cable connectors and put them back",
+            "end_frame": 330,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 11.0,
+            "end_time_s": 16.5,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 330,
+            "end_frame": 495,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 17.0,
+            "end_time_s": 26.5,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 510,
+            "end_frame": 795,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 27.0,
+            "end_time_s": 34.0,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 810,
+            "end_frame": 1020,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 35.0,
+            "end_time_s": 43.0,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 1050,
+            "end_frame": 1290,
+            "is_success": true
+          },
+          {
+            "segment_id": "6",
+            "start_time_s": 44.0,
+            "end_time_s": 54.5,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 1320,
+            "end_frame": 1635,
+            "is_success": true
+          },
+          {
+            "segment_id": "7",
+            "start_time_s": 55.5,
+            "end_time_s": 65.5,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 1665,
+            "end_frame": 1965,
+            "is_success": true
+          },
+          {
+            "segment_id": "8",
+            "start_time_s": 66.5,
+            "end_time_s": 76.0,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 1995,
+            "end_frame": 2280,
+            "is_success": true
+          },
+          {
+            "segment_id": "9",
+            "start_time_s": 76.0,
+            "end_time_s": 81.5,
+            "fine_label": "Gather the organized cables together",
+            "start_frame": 2280,
+            "end_frame": 2445,
+            "is_success": true
+          },
+          {
+            "segment_id": "10",
+            "start_time_s": 82.0,
+            "end_time_s": 98.0,
+            "fine_label": "Select the cables to handle",
+            "start_frame": 2460,
+            "end_frame": 2940,
+            "is_success": true
+          },
+          {
+            "segment_id": "11",
+            "start_time_s": 98.0,
+            "end_time_s": 107.5,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 2940,
+            "end_frame": 3225,
+            "is_success": true
+          },
+          {
+            "segment_id": "12",
+            "start_time_s": 108.5,
+            "end_time_s": 117.0,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 3255,
+            "end_frame": 3510,
+            "is_success": true
+          },
+          {
+            "segment_id": "13",
+            "start_time_s": 118.0,
+            "end_time_s": 129.0,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 3540,
+            "end_frame": 3870,
+            "is_success": true
+          },
+          {
+            "segment_id": "14",
+            "start_time_s": 130.0,
+            "end_time_s": 149.5,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 3900,
+            "end_frame": 4485,
+            "is_success": true
+          },
+          {
+            "segment_id": "15",
+            "start_time_s": 150.5,
+            "end_time_s": 161.5,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 4515,
+            "end_frame": 4845,
+            "is_success": true
+          },
+          {
+            "segment_id": "16",
+            "start_time_s": 162.0,
+            "end_time_s": 169.5,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 4860,
+            "end_frame": 5085,
+            "is_success": true
+          },
+          {
+            "segment_id": "17",
+            "start_time_s": 170.0,
+            "end_time_s": 179.5,
+            "fine_label": "Organize cable connectors and put them back",
+            "start_frame": 5100,
+            "end_frame": 5385,
+            "is_success": true
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1784716028043522000"
+    }
+  }
+]

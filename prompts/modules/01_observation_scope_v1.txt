@@ -1,0 +1,37 @@
+DESCRIPTION GOAL AND OBSERVATION SCOPE
+
+Describe the visible manipulation process in the supplied video or chronological frames: how an operator uses hands, a gripper, or tools to act on objects; how the operation unfolds; and what observable changes result. Ground all claims in the current view. Describe the actual visible operator; do not assume a human is a robot because the data is intended for robotics.
+
+Consider the following dimensions when relevant and supported. They are an observation checklist, not mandatory output fields. Include details that distinguish the operation or explain its visible progression; omit irrelevant dimensions rather than inventing details to fill them.
+
+1. OBJECTS AND ROLES
+Identify manipulated objects, tools, materials, containers, and supporting surfaces. Distinguish their roles in the operation. Mention visible attributes or quantities only when reliable and useful for identifying objects or understanding the action. Do not assume a tool is present in a bare-hand operation. Preserve object identity across observations when supported; do not count repeated views of the same object as additional objects.
+
+2. HAND OR GRIPPER USE AND COORDINATION
+Describe the primary manipulating hand or gripper and any supporting, stabilizing, stretching, receiving, or transferring action by another hand or gripper. Capture coordinated manipulation, handoffs, and changes of grip. Name anatomical left or right hands only when reliably identifiable; image-left and image-right are not anatomical hand sides.
+
+3. CONTACT AND MANIPULATION METHOD
+Describe where the hand or tool contacts the target and how it acts on it when visible. Use specific supported verbs such as grasp, lift, pull, press, rotate, insert, remove, scrape, wipe, cut, stir, pour, fold, place, or release. Distinguish reaching toward an object from grasping it, and moving an object toward a surface from placing and releasing it. Include meaningful direction, orientation, or repeated motion when visible. Do not estimate force, torque, exact angle, dimensions, or contact details that the imagery does not establish.
+
+4. SPATIAL RELATIONS AND TRANSFER
+Describe the visible source, path, destination, containment, support, attachment, or insertion relationship when it matters to the operation. Prefer object-relative descriptions such as "from the rack onto the bed" or "into the container" over ambiguous viewer-relative directions. If using image-relative directions, explicitly identify them as such. Camera movement or a change of viewpoint alone is not evidence that an object moved or changed state.
+
+5. ACTION ORDER AND LOCAL PROGRESSION
+Describe meaningful action order, simultaneous actions, and transitions between steps. Include preparation, positioning, execution, adjustment, cleanup, and returning objects or tools when they are part of the visible process. Cover the current segment only; do not complete a familiar procedure from general knowledge or extrapolate what happens next.
+
+6. VISIBLE STATE CHANGES AND OUTCOMES
+Describe supported changes in position, shape, open/closed state, attachment, contents, arrangement, or surface condition. Distinguish performing an action from achieving its intended result: wiping does not by itself establish cleanliness, and turning a lid does not by itself establish that it opened. Claim a state transition only when the available observations establish it; if only an ending state is visible, describe that state without inventing the preceding transition. Compare compatible views and account for occlusion before claiming change.
+
+7. ATTEMPTS, INTERRUPTIONS, AND RECOVERY
+Capture visible unsuccessful attempts, slips, drops, jams, interruptions, repositioning, repeated attempts, tool switches, and recovery actions. Describe the concrete event rather than assigning a generic success/failure judgment. Repeated motion alone does not establish failure; it may be the normal operation. Do not equate a source annotation's success flag with a visually observed outcome.
+
+8. TOOL EFFECTS AND WORKFLOW CONNECTIONS
+Describe how a tool actually acts on its target and any directly supported local effect or preparation-to-execution relationship. Record visible selection or switching of tools without inventing why one was preferred. Treat intended purpose, material properties, causal explanations, alternative-tool suitability, and long-horizon plans as interpretations that require additional evidence, not routine caption facts. Do not turn temporal succession alone into a causal claim.
+
+9. VISIBILITY AND UNCERTAINTY
+Identify consequential occlusion, off-screen manipulation, ambiguous object identity, missing beginnings or endings, and outcomes not visible in this view. State precisely what cannot be confirmed when it affects the action description. Describe what is visible even when some details are uncertain. Do not borrow an unseen event from another camera, a task annotation, prior captions, or general knowledge and present it as an observation of the current view.
+
+CONTENT PRIORITY
+Prioritize key objects and roles, contact and manipulation, meaningful action order and spatial transfer, visible outcomes, and consequential uncertainty. Let the amount of supported activity determine the necessary detail. Do not pad the description with static background, speculate about emotions or intent, or present visual estimates as measured physical quantities. Sparse frames support only the events they establish; do not invent intervening movements or precise action boundaries.
+
+This module defines what to observe and describe. Output language, length, schema, timestamp conventions, context inputs, and multi-camera fusion rules are specified by separate modules.

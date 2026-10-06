@@ -1,0 +1,128 @@
+[
+  {
+    "video_id": "c41c0f00-7b74-4117-ac2c-a2dd40e2a1ff",
+    "bold_mark": "A person folds a towel, places the folded towel on the towel rack, then takes bathroom supplies out of the carton and arranges them on the sink counter and toilet tank.",
+    "sst": "business/hotel/hotel_room/daily_work",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "end_time_s": 127.0,
+        "fine_label": "Fold the towel",
+        "end_frame": 3810,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "end_time_s": 13.0,
+            "fine_label": "Unfold and smooth the towel",
+            "end_frame": 390,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 13.0,
+            "end_time_s": 33.5,
+            "fine_label": "Fold one side of the towel",
+            "start_frame": 390,
+            "end_frame": 1005,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 33.5,
+            "end_time_s": 79.0,
+            "fine_label": "Fold the other side of the towel to form a long strip",
+            "start_frame": 1005,
+            "end_frame": 2370,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 79.0,
+            "end_time_s": 121.0,
+            "fine_label": "Fold the long strip towel into a square shape",
+            "start_frame": 2370,
+            "end_frame": 3630,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 121.0,
+            "end_time_s": 127.0,
+            "fine_label": "Place the folded towel on the towel rack",
+            "start_frame": 3630,
+            "end_frame": 3810,
+            "is_success": true
+          }
+        ]
+      },
+      {
+        "segment_id": "2",
+        "start_time_s": 132.0,
+        "end_time_s": 179.0,
+        "fine_label": "Arrange bathroom supplies",
+        "start_frame": 3960,
+        "end_frame": 5370,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "start_time_s": 132.0,
+            "end_time_s": 139.0,
+            "fine_label": "Take the glass out of the carton and place it on the tray of the sink counter",
+            "start_frame": 3960,
+            "end_frame": 4170,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 139.0,
+            "end_time_s": 145.5,
+            "fine_label": "Take the second glass out of the carton, place it on the tray and adjust the tray position",
+            "start_frame": 4170,
+            "end_frame": 4365,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 146.0,
+            "end_time_s": 154.5,
+            "fine_label": "Take two rolls of toilet paper out of the carton and place them on the toilet tank",
+            "start_frame": 4380,
+            "end_frame": 4635,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 156.0,
+            "end_time_s": 166.5,
+            "fine_label": "Take two toiletry boxes out of the carton and place them on the sink counter",
+            "start_frame": 4680,
+            "end_frame": 4995,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 167.5,
+            "end_time_s": 173.5,
+            "fine_label": "Take the small square box out of the carton and place it on the sink counter",
+            "start_frame": 5025,
+            "end_frame": 5205,
+            "is_success": true
+          },
+          {
+            "segment_id": "6",
+            "start_time_s": 174.5,
+            "end_time_s": 179.0,
+            "fine_label": "Take the dish-shaped item out of the carton and place it on the sink counter",
+            "start_frame": 5235,
+            "end_frame": 5370,
+            "is_success": true
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1786272181476866000"
+    }
+  }
+]

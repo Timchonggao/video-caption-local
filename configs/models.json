@@ -1,0 +1,11 @@
+{
+  "qwen": {
+    "label": "Qwen 3.8 27B"
+  },
+  "doubao": {
+    "label": "豆包"
+  },
+  "gemini": {
+    "label": "Gemini"
+  }
+}

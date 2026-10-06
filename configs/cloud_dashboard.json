@@ -1,0 +1,22 @@
+{
+  "sample": "sample_01",
+  "camera": "camera2",
+  "fixed_prompt_id": "baseline-v2",
+  "run_ids": [
+    "qwen-sample01-v2-official-off-s1",
+    "qwen-sample01-v2-official-low-s1",
+    "qwen-sample01-v2-official-medium-s1",
+    "qwen-sample01-v2-official-xhigh-s1",
+    "doubao-seed21-lite-sample01-video-r3"
+  ],
+  "task_ids": [
+    "sample_01_seg02_sub01__camera2",
+    "sample_01_seg02_sub02__camera2",
+    "sample_01_seg02_sub10__camera2",
+    "sample_01_seg02_sub11__camera2",
+    "sample_01_seg02_sub12__camera2"
+  ],
+  "jpeg_max_edge": 640,
+  "jpeg_quality": 75,
+  "max_storage_bytes": 8000000000
+}

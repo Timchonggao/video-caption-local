@@ -1,0 +1,46 @@
+[
+  {
+    "video_id": "14a77936-1f1f-e17b-2f11-64e88d6fd8fb",
+    "bold_mark": "A person cleans the bathroom floor drain.",
+    "sst": "domestic_services/bathroom/clean/clean_floor_drain",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "end_time_s": 25.5,
+        "fine_label": "Clean the floor drain",
+        "end_frame": 765,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "end_time_s": 3.5,
+            "fine_label": "Remove the floor drain cover and spray cleaner into the floor drain",
+            "end_frame": 105,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 3.5,
+            "end_time_s": 22.5,
+            "fine_label": "Scrub the inside of the floor drain",
+            "start_frame": 105,
+            "end_frame": 675,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 22.5,
+            "end_time_s": 25.5,
+            "fine_label": "Place the floor drain cover back onto the floor drain",
+            "start_frame": 675,
+            "end_frame": 765,
+            "is_success": true
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1785213589104787000"
+    }
+  }
+]

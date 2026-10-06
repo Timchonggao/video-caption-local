@@ -1,0 +1,1808 @@
+{
+  "profile": "half-v1",
+  "complete": true,
+  "videos": [
+    {
+      "id": "sample_01_camera0",
+      "sample_id": "sample_01",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_01/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003569999999999962,
+      "first_available_time_s": 0.033357,
+      "last_available_time_s": 175.63338,
+      "source_bytes": 89933983,
+      "proxy_bytes": 41980123,
+      "frames": 5269,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "6e70f610e895c3331f5d452f34fd8138df347a2cb7ffab8ef0b2eca4abbab37c",
+      "signature": {
+        "source_sha256": "986ad79f927b6096a12b92592fd8281a9493f814b8b963f62404f5e498310d54",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_01_camera1",
+      "sample_id": "sample_01",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_01/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003779999999999964,
+      "first_available_time_s": 0.033378,
+      "last_available_time_s": 175.633404,
+      "source_bytes": 89932488,
+      "proxy_bytes": 44038505,
+      "frames": 5269,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "c9e77e3206bbd4df9f624d9463d317f49507cca21bb63297e144bf7b150afc54",
+      "signature": {
+        "source_sha256": "7aa3d91fd1eb06e87c3561099e8d68ac8fa0087cc690cc5f0956135eea056edc",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_01_camera2",
+      "sample_id": "sample_01",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_01/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.000334999999999995,
+      "first_available_time_s": 0.033335,
+      "last_available_time_s": 175.633351,
+      "source_bytes": 90059151,
+      "proxy_bytes": 45178090,
+      "frames": 5269,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "cb96bfececc32bf481d705f05205405f4539c19108a58422f8aa1f9f8a747032",
+      "signature": {
+        "source_sha256": "5a061ccab8c507dbecbd5d23d18eca72a81e78858a42988eb7038ea905085903",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_01_camera3",
+      "sample_id": "sample_01",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_01/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00034899999999999515,
+      "first_available_time_s": 0.033349,
+      "last_available_time_s": 175.633366,
+      "source_bytes": 90097340,
+      "proxy_bytes": 44000700,
+      "frames": 5269,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "44d7407fb5c286c1b14e3ad70be694e449f2e4b1c1b196fb4ba07fbd4067a73e",
+      "signature": {
+        "source_sha256": "18a675c8184291abdb7f4bcf62132ad0798bf1c4480effd3bf2829de61794624",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_01_camera4",
+      "sample_id": "sample_01",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_01/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00038699999999999846,
+      "first_available_time_s": 0.033387,
+      "last_available_time_s": 175.633419,
+      "source_bytes": 90061056,
+      "proxy_bytes": 42784711,
+      "frames": 5269,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "e6cffbae28d9d3bf1b06d9ebfd39414feef91671a849198015cdad2e34e8d481",
+      "signature": {
+        "source_sha256": "579d99257da663cd90ff0a7cd9eed739305c51e5ff93f0833d1cdddc192a9ecc",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_01_camera5",
+      "sample_id": "sample_01",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_01/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00036800000000000027,
+      "first_available_time_s": 0.033368,
+      "last_available_time_s": 175.633392,
+      "source_bytes": 89945958,
+      "proxy_bytes": 39422382,
+      "frames": 5269,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "c83b08fb9f471f092d0bbd98a9df2b36ff68ba5ef02a9547f0c50f1d4e38176a",
+      "signature": {
+        "source_sha256": "e9f4af4978a1e2d6c20654786748d7326deaf5a812a8735cfbf294683acb2fc9",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_02_camera0",
+      "sample_id": "sample_02",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_02/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00035400000000000015,
+      "first_available_time_s": 0.033354,
+      "last_available_time_s": 159.266702,
+      "source_bytes": 81794749,
+      "proxy_bytes": 34252911,
+      "frames": 4778,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "918bf8324c1dd3b88ea2729253ce2f60e6d50f0c10df8101b00012666683d553",
+      "signature": {
+        "source_sha256": "9550c4b127275add1f02d3afb05fbec742f0f97e2ca1faef3f85d6ed3e39f423",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_02_camera1",
+      "sample_id": "sample_02",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_02/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0007370000000000015,
+      "first_available_time_s": 0.066737,
+      "last_available_time_s": 159.266724,
+      "source_bytes": 81839064,
+      "proxy_bytes": 34835399,
+      "frames": 4777,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "6d162e9c96e88e946426a27db7ca732e0f93e1efe9d8787991d129b4fe5286fb",
+      "signature": {
+        "source_sha256": "733f9d37d21e55798343951bcd46ee3f44d909dd3622b606cfe610088af885a8",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_02_camera2",
+      "sample_id": "sample_02",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_02/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00066999999999999,
+      "first_available_time_s": 0.06667,
+      "last_available_time_s": 159.266681,
+      "source_bytes": 81762431,
+      "proxy_bytes": 34629127,
+      "frames": 4777,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "75b4e0d29dacef90d00fcc198676f84305f713bd6ebd1125e1269eb77754cbe7",
+      "signature": {
+        "source_sha256": "0b78b9b6a0ef62f2580809b5e425a2c248ac933ac016ce24fef419643c39e399",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_02_camera3",
+      "sample_id": "sample_02",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_02/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0006889999999999952,
+      "first_available_time_s": 0.066689,
+      "last_available_time_s": 159.266693,
+      "source_bytes": 81793856,
+      "proxy_bytes": 32304112,
+      "frames": 4777,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "6b0623fa3524bac243baa75db591b223a4ee6d426704ea5f269b81de04e9582e",
+      "signature": {
+        "source_sha256": "3e0a54f9d35029ad83e55a0d363fa0a646f739cae0eb25e9764fcb5a4058e43c",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_02_camera4",
+      "sample_id": "sample_02",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_02/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003809999999999994,
+      "first_available_time_s": 0.033381,
+      "last_available_time_s": 159.266732,
+      "source_bytes": 81802831,
+      "proxy_bytes": 35025603,
+      "frames": 4778,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "16a3711c42417e17a491b155b934e2cd7f1ea48a2ca62c175571634bf8d58cd4",
+      "signature": {
+        "source_sha256": "c4b104054b29009dbd523fe03680a5b9d3a9965ad5fc203029dce2886db97090",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_02_camera5",
+      "sample_id": "sample_02",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_02/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00036399999999999627,
+      "first_available_time_s": 0.033364,
+      "last_available_time_s": 159.266713,
+      "source_bytes": 81793407,
+      "proxy_bytes": 34294281,
+      "frames": 4778,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "36325ce86160820044fa4c53f4d95391551d726776fd8a8df03296b42830d798",
+      "signature": {
+        "source_sha256": "0a6182047ee240d5a6b94e890d3652be8c736911664e9c1e814365020b226df4",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_03_camera0",
+      "sample_id": "sample_03",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_03/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0006589999999999929,
+      "first_available_time_s": 0.066659,
+      "last_available_time_s": 25.53333,
+      "source_bytes": 13046726,
+      "proxy_bytes": 3190852,
+      "frames": 765,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "aa53396f8a6fa3f331e7da7f1462703f900ea3da11df0f2d52a95a1216d1283a",
+      "signature": {
+        "source_sha256": "08603bfac81ae086c3f9cc652b4f1dae99df2c3072797f56c6945f598b999e04",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_03_camera1",
+      "sample_id": "sample_03",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_03/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0006639999999999979,
+      "first_available_time_s": 0.066664,
+      "last_available_time_s": 25.533335,
+      "source_bytes": 12997065,
+      "proxy_bytes": 3030301,
+      "frames": 765,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "c108e3d6219a674db269942997246d3c8c78b67525d42861ab29a8b2399db258",
+      "signature": {
+        "source_sha256": "6dd23ff13ff9ff8a7ddd23fc775eb12acb41ad0afc76ad57c0d37054f4473ad7",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_03_camera2",
+      "sample_id": "sample_03",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_03/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0006519999999999998,
+      "first_available_time_s": 0.066652,
+      "last_available_time_s": 25.533322,
+      "source_bytes": 13032811,
+      "proxy_bytes": 3302496,
+      "frames": 765,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "35ff55a8c5da05a64a211c896dc493e73d28d8190c304886704eac42fd473b11",
+      "signature": {
+        "source_sha256": "5aab694f8b488f3badd75072c14e03a993be9cdc3e19828e93abb371328fbf34",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_03_camera3",
+      "sample_id": "sample_03",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_03/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0,
+      "first_available_time_s": 0.0,
+      "last_available_time_s": 25.533326,
+      "source_bytes": 13100010,
+      "proxy_bytes": 3507200,
+      "frames": 767,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "3b71ef3f13b19cfcdb8222beff069fd3347122cd90e27a2d79d778fdc086664d",
+      "signature": {
+        "source_sha256": "736ec84fc73641c16bdd1c81450aeb6e9b120427654ac5a7cd27a633c0d10269",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_03_camera4",
+      "sample_id": "sample_03",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_03/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0006659999999999999,
+      "first_available_time_s": 0.066666,
+      "last_available_time_s": 25.533338,
+      "source_bytes": 13049931,
+      "proxy_bytes": 3550650,
+      "frames": 765,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "06997323d11396eb1f20962374cd703a16894dc78890ce87da05285d036ec130",
+      "signature": {
+        "source_sha256": "de2ae95e8cc5a3ca838aa2da5b0e4dffe468894712908cc4933871fed986e65f",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_03_camera5",
+      "sample_id": "sample_03",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_03/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.000336999999999997,
+      "first_available_time_s": 0.033337,
+      "last_available_time_s": 25.533333,
+      "source_bytes": 13048775,
+      "proxy_bytes": 4081102,
+      "frames": 766,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "83a2f679be7a1148c089f64cfab3753db9ca018047a8e321aa6b21eef8d16628",
+      "signature": {
+        "source_sha256": "fb81f6b0b9600212dd5cd2e8f0571bdf3dc2079646fc844a65d6d1a80d97b65b",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_04_camera0",
+      "sample_id": "sample_04",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_04/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.000335999999999996,
+      "first_available_time_s": 0.033336,
+      "last_available_time_s": 31.333819,
+      "source_bytes": 16052666,
+      "proxy_bytes": 6408817,
+      "frames": 940,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "7d4a89b7fb0493cdc9746ebc314614081022a08ffae99faa81ec71c89404539d",
+      "signature": {
+        "source_sha256": "7db95f65f8cb82de8e2c79f8ed90e6f1a19311c6bc38d1e179ba55cfd1354d9f",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_04_camera1",
+      "sample_id": "sample_04",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_04/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003439999999999971,
+      "first_available_time_s": 0.033344,
+      "last_available_time_s": 31.333841,
+      "source_bytes": 16112339,
+      "proxy_bytes": 6288548,
+      "frames": 940,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "6593c80a1d8fd4cc32b74c83dde7156c25f6a260c215c5d51827e5046ef61b47",
+      "signature": {
+        "source_sha256": "1973347b106339cf7de44279de3a8013d6a2d33ed55b27acd2eb33748bc5b8bc",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_04_camera2",
+      "sample_id": "sample_04",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_04/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0006619999999999959,
+      "first_available_time_s": 0.066662,
+      "last_available_time_s": 31.333797,
+      "source_bytes": 16121298,
+      "proxy_bytes": 6436115,
+      "frames": 939,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "26558e4a317481af187a264abe242ad1ea17c1bd2cccf8d23e5be52d0995fa07",
+      "signature": {
+        "source_sha256": "df91093a13168273cb67d97c1ca1f77fe3fb1c384fe6838e2ad65ad395bc9690",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_04_camera3",
+      "sample_id": "sample_04",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_04/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00033199999999999896,
+      "first_available_time_s": 0.033332,
+      "last_available_time_s": 31.333809,
+      "source_bytes": 16133410,
+      "proxy_bytes": 6495838,
+      "frames": 940,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "cc304ec1bb8d0fbede1852654eb21ae16edfd198165edf4e0916c42f39e6cf9d",
+      "signature": {
+        "source_sha256": "0e1838ea364224f616b4d5c6a7662ac4815f2a851f4c7373013aee8a8c18596f",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_04_camera4",
+      "sample_id": "sample_04",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_04/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003480000000000011,
+      "first_available_time_s": 0.033348,
+      "last_available_time_s": 31.333853,
+      "source_bytes": 16122819,
+      "proxy_bytes": 6226824,
+      "frames": 940,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "de1cb4c6467e9fb0a4d0bef1c864ee39697518c95796cf99e1246c006b340090",
+      "signature": {
+        "source_sha256": "9759488500c59aff44c25d6cbd9ca9ce9d7f3cd914bb5bb0c7f6d15aaf0094ab",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_04_camera5",
+      "sample_id": "sample_04",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_04/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.000677999999999998,
+      "first_available_time_s": 0.066678,
+      "last_available_time_s": 31.333828,
+      "source_bytes": 16058551,
+      "proxy_bytes": 6281270,
+      "frames": 939,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "957d147947df930a4cf4f0a3bb1e716015d305f6532e012659f1f0de4ff93a36",
+      "signature": {
+        "source_sha256": "2926e253a86e2db60866470c357df35b2ae3e913292f36d0219ee4c65207335b",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_05_camera0",
+      "sample_id": "sample_05",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_05/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.000335999999999996,
+      "first_available_time_s": 0.033336,
+      "last_available_time_s": 55.900009,
+      "source_bytes": 28692901,
+      "proxy_bytes": 8496776,
+      "frames": 1677,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "63265651215de441d8600119fdfc6dfa0d47bafe2b76f9200524151903cdad9e",
+      "signature": {
+        "source_sha256": "460a6d16ead47071c053df40de3f820bca101715a3dbeacd3c1cf3efe6512b06",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_05_camera1",
+      "sample_id": "sample_05",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_05/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003439999999999971,
+      "first_available_time_s": 0.033344,
+      "last_available_time_s": 55.900019,
+      "source_bytes": 28680781,
+      "proxy_bytes": 8515355,
+      "frames": 1677,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "bd88121cb515dc9f9dfebc7fc27c56ea384742320ccae96c9b40a31fed72f33b",
+      "signature": {
+        "source_sha256": "451715af100ceb058d9a7fb7248e64948596af8caf168912b9dccf450f9c4ed6",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_05_camera2",
+      "sample_id": "sample_05",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_05/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003280000000000019,
+      "first_available_time_s": 0.033328,
+      "last_available_time_s": 55.9,
+      "source_bytes": 28680384,
+      "proxy_bytes": 8805144,
+      "frames": 1677,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "ba20f96f00e7e7a24ba6e4e7891b1281e3f12b9099c64fede24a6a73a7949270",
+      "signature": {
+        "source_sha256": "d3f9ca5d09a2656e5193fff5b15a11d7eab067ad22f74d415f168d42cfe1539d",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_05_camera3",
+      "sample_id": "sample_05",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_05/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00033199999999999896,
+      "first_available_time_s": 0.033332,
+      "last_available_time_s": 55.900005,
+      "source_bytes": 28678400,
+      "proxy_bytes": 9780491,
+      "frames": 1677,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "f39f17533b8f35fa0547865c1e23352ae7a1f21246a76451658751cb265875cc",
+      "signature": {
+        "source_sha256": "dc7518461a8fbdb586d221ce0d09866c0798baca0b4c3ee56610355d4c7f2848",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_05_camera4",
+      "sample_id": "sample_05",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_05/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003480000000000011,
+      "first_available_time_s": 0.033348,
+      "last_available_time_s": 55.900023,
+      "source_bytes": 28690320,
+      "proxy_bytes": 9679536,
+      "frames": 1677,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "c81c277f74d9d682534d16d7845f88ab84c28c2ae2424eff95dac0a9e6ebce2a",
+      "signature": {
+        "source_sha256": "3ec3a505e48fdacf0c5debde85a1c9bfbca1a7182919852ee1dc1b6fcba69e52",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_05_camera5",
+      "sample_id": "sample_05",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_05/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00034,
+      "first_available_time_s": 0.03334,
+      "last_available_time_s": 55.900015,
+      "source_bytes": 28683039,
+      "proxy_bytes": 9228317,
+      "frames": 1677,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "79ae69fd118c9202bb5a70a6fee8101e2566d3db18dfc28624e62aa47e8f656f",
+      "signature": {
+        "source_sha256": "b7735e4bbf72f13f9915d38e2092a97912ecdee539727901d79fb8507c160f5a",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_06_camera0",
+      "sample_id": "sample_06",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_06/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003419999999999951,
+      "first_available_time_s": 0.033342,
+      "last_available_time_s": 179.033564,
+      "source_bytes": 91801002,
+      "proxy_bytes": 31084700,
+      "frames": 5371,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "9ab12e4b2a78781ba5b132b5ccb3031d83d2f3cef41ae243b8f5f46282f5e9a3",
+      "signature": {
+        "source_sha256": "4ad9e8181def83e9dd61124a51361f4ba9ffa1dd6e986803babb8edaf1d9fe54",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_06_camera1",
+      "sample_id": "sample_06",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_06/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00035400000000000015,
+      "first_available_time_s": 0.033354,
+      "last_available_time_s": 179.033575,
+      "source_bytes": 91814081,
+      "proxy_bytes": 28260325,
+      "frames": 5371,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "ba6f753d96aa1522e5c443f78f9476bb59926d015f428dd7874fe47f5d536430",
+      "signature": {
+        "source_sha256": "d9afef29f8e6d724dd1dcf5b7209b649926906fca9c3b00eace4915bf9dec31e",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_06_camera2",
+      "sample_id": "sample_06",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_06/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00033099999999999796,
+      "first_available_time_s": 0.033331,
+      "last_available_time_s": 179.033551,
+      "source_bytes": 91870385,
+      "proxy_bytes": 26269393,
+      "frames": 5371,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "97496ca691480430358f55ed5c7b5c10d49ba886e85666991250366e9474f4e7",
+      "signature": {
+        "source_sha256": "e08e61b885680a323417650a57451925f0adcd6c94036a6562a9127889f21228",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_06_camera3",
+      "sample_id": "sample_06",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_06/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0006690000000000029,
+      "first_available_time_s": 0.066669,
+      "last_available_time_s": 179.03356,
+      "source_bytes": 91726025,
+      "proxy_bytes": 32252298,
+      "frames": 5370,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "1f846bb7d11aa91c1e406c758f42fd96ca1036ec7bdd7d515d3368b847f210ff",
+      "signature": {
+        "source_sha256": "7e5516c9080a62c3f2f1e2942cfd148803d76bc37f5a2fe475289f0ac8332438",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_06_camera4",
+      "sample_id": "sample_06",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_06/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003589999999999982,
+      "first_available_time_s": 0.033359,
+      "last_available_time_s": 179.033581,
+      "source_bytes": 91969921,
+      "proxy_bytes": 36491338,
+      "frames": 5371,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "1b2abc021e5cd0d248f5ffd03ee012dbcc1d84c89c46a086354f5e7fe0be8b2c",
+      "signature": {
+        "source_sha256": "9c71171ba3dbc5e785862044a54bfda7f2e1e88b6037275a5862d4f83a12701b",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_06_camera5",
+      "sample_id": "sample_06",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_06/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.000677999999999998,
+      "first_available_time_s": 0.066678,
+      "last_available_time_s": 179.033571,
+      "source_bytes": 92099389,
+      "proxy_bytes": 31676910,
+      "frames": 5370,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "ec6abc3535eb65b5fd464a824f6efa5bcf1d2d30788d515ad3ff8043a46e9915",
+      "signature": {
+        "source_sha256": "c03467c262021de59f24a3a25a3f021cf22d17ae809198c0169b71e495c58673",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_07_camera0",
+      "sample_id": "sample_07",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_07/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.000334999999999995,
+      "first_available_time_s": 0.033335,
+      "last_available_time_s": 179.233366,
+      "source_bytes": 91164302,
+      "proxy_bytes": 54724867,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "8f566f55166542692d0c6237f8ec8de5c7398328e0a39649f54584f6cb590ae9",
+      "signature": {
+        "source_sha256": "967008a890fbb5a8c3b4fab33cbb1925dfd56212ae8d0c62d26e9054873ec0ba",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_07_camera1",
+      "sample_id": "sample_07",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_07/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003439999999999971,
+      "first_available_time_s": 0.033344,
+      "last_available_time_s": 179.23338,
+      "source_bytes": 91859134,
+      "proxy_bytes": 50374527,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "54aec8aabebd9f4dcbed70a37a02a8f7084435dc7112a4716e7243c867d80a2a",
+      "signature": {
+        "source_sha256": "2c815c576580df3e734fd8545e4da549a2798bfdb7ab2cbc40e89a3ac2a54a34",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_07_camera2",
+      "sample_id": "sample_07",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_07/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003270000000000009,
+      "first_available_time_s": 0.033327,
+      "last_available_time_s": 179.233346,
+      "source_bytes": 92044633,
+      "proxy_bytes": 49421200,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "dedda16bfac9eb035c733d8c832821caa9bb0bbd2fe37af52a0c4d8af22cbde0",
+      "signature": {
+        "source_sha256": "eb4c11d45458d94b925e288cbc14af53a1736507c1038417bc840eacf63eb3e7",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_07_camera3",
+      "sample_id": "sample_07",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_07/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00033199999999999896,
+      "first_available_time_s": 0.033332,
+      "last_available_time_s": 179.233355,
+      "source_bytes": 91388458,
+      "proxy_bytes": 57187762,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "e325752af40a815e5ed9454b75231f15347af84c28e3fdbd0ecc83ad08c3e679",
+      "signature": {
+        "source_sha256": "6400daa7300e7f93a8a4238e95a61f3a37e5717e89569220990843ba3a1c0329",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_07_camera4",
+      "sample_id": "sample_07",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_07/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003470000000000001,
+      "first_available_time_s": 0.033347,
+      "last_available_time_s": 179.233386,
+      "source_bytes": 95783588,
+      "proxy_bytes": 58997006,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "6dec92fa737687f076d03a03e9a04256272c7c7a5eb76b45f96370d2ed8b19af",
+      "signature": {
+        "source_sha256": "140f4ca9777027570b455e5fbf08d538f6e6a116e5ca52ac7278b5eee2383388",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_07_camera5",
+      "sample_id": "sample_07",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_07/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00034,
+      "first_available_time_s": 0.03334,
+      "last_available_time_s": 179.233373,
+      "source_bytes": 95667244,
+      "proxy_bytes": 58299633,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "253cafc015f0a9b3971d4d3177f22fc038ee45067a6b087968d5493bfe18e1a0",
+      "signature": {
+        "source_sha256": "f74e24717fa50d348e750840943d31a1fef2759339f3c2320c79dd4422adf059",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_08_camera0",
+      "sample_id": "sample_08",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_08/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0007029999999999953,
+      "first_available_time_s": 0.066703,
+      "last_available_time_s": 179.300028,
+      "source_bytes": 123025188,
+      "proxy_bytes": 27629277,
+      "frames": 5378,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "9ec198ac90d608e4409e89d37e37874c5f79e31695a3b8cdb0b7b28b1183dc24",
+      "signature": {
+        "source_sha256": "272a1f78bef0893198aa6b2c892607a854ac769581c26d3136552537c9bc4263",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_08_camera1",
+      "sample_id": "sample_08",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_08/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00040799999999999864,
+      "first_available_time_s": 0.033408,
+      "last_available_time_s": 179.300039,
+      "source_bytes": 137929244,
+      "proxy_bytes": 27487798,
+      "frames": 5379,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "c3dd239aaf7393e09002904b2b2603ff18c046bffd9176289bc2b2d6435c4693",
+      "signature": {
+        "source_sha256": "e9199df0386f07c7130067e98767a66c9c1235f9d54a41d15d10d0de4e2f765a",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_08_camera2",
+      "sample_id": "sample_08",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_08/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00033400000000000096,
+      "first_available_time_s": 0.033334,
+      "last_available_time_s": 179.300014,
+      "source_bytes": 164510023,
+      "proxy_bytes": 27922635,
+      "frames": 5379,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "c43642f16a3845d55fc524eff3ce536554ff3c122fc11806f85023e956655b39",
+      "signature": {
+        "source_sha256": "72563c9e63856eeee11de2d11cae9f2b3cfda805d712b7fbb4cdfdc64165965a",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_08_camera3",
+      "sample_id": "sample_08",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_08/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00035500000000000115,
+      "first_available_time_s": 0.033355,
+      "last_available_time_s": 179.300022,
+      "source_bytes": 176300799,
+      "proxy_bytes": 28636826,
+      "frames": 5379,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "35bb6935d2596b73755d2469ad71376ccc7249a38951773d19532c8fffdb8dd4",
+      "signature": {
+        "source_sha256": "dacc7a0b2483fb65268b532695af3a5e9cd089421dc3ae007dc01650eb130e26",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_08_camera4",
+      "sample_id": "sample_08",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_08/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0004299999999999998,
+      "first_available_time_s": 0.03343,
+      "last_available_time_s": 179.300045,
+      "source_bytes": 138549559,
+      "proxy_bytes": 28893673,
+      "frames": 5379,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "d470e26ca4d6361cd07e62d8c55ce72e7a011425a9b815ac2c1eef229f6bf78f",
+      "signature": {
+        "source_sha256": "79dcfc96da0d955182670ec3d0dba02f26a2db4b5bc401347a3fe421305c9a69",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_08_camera5",
+      "sample_id": "sample_08",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_08/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003939999999999985,
+      "first_available_time_s": 0.033394,
+      "last_available_time_s": 179.300034,
+      "source_bytes": 141435979,
+      "proxy_bytes": 28514549,
+      "frames": 5379,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "9bac4404cfc4514f417b1b811ef043536f2232ad29519e216784eac06d3c3dbf",
+      "signature": {
+        "source_sha256": "93394294f8c6e29faf61b647f9b9651d2fb0409998858aba891a3d6b8d0c6d43",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_09_camera0",
+      "sample_id": "sample_09",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_09/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003569999999999962,
+      "first_available_time_s": 0.033357,
+      "last_available_time_s": 179.200019,
+      "source_bytes": 91925068,
+      "proxy_bytes": 50658101,
+      "frames": 5376,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "fede6e190703b994ae65ee5c132d121458176499f30c082625737decd5ed2165",
+      "signature": {
+        "source_sha256": "bc52a04746b403c84bb5c58fdc4968cb60d22f7198fdbcb5aef96ffa42ad9b76",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_09_camera1",
+      "sample_id": "sample_09",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_09/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00038599999999999746,
+      "first_available_time_s": 0.033386,
+      "last_available_time_s": 179.200029,
+      "source_bytes": 91941430,
+      "proxy_bytes": 47226211,
+      "frames": 5376,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "a42c26576ebbb52d58dc90be48ab4a1401fb3c464be5cf5a0936c253b6752916",
+      "signature": {
+        "source_sha256": "24e7cd4e65c292de790f17ff705401bad67d504d0ec5080b44becb0a1656a9ce",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_09_camera2",
+      "sample_id": "sample_09",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_09/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00032999999999999696,
+      "first_available_time_s": 0.03333,
+      "last_available_time_s": 179.200007,
+      "source_bytes": 92048314,
+      "proxy_bytes": 50745971,
+      "frames": 5376,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "7c0c9dad25a421afa3408c07fec8228c889aed17f535d9794fbf5326a3b69e55",
+      "signature": {
+        "source_sha256": "1d740b3597f4324a6d27e41dc40a07d6125c280ab8a4edf1311b39ac0c382575",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_09_camera3",
+      "sample_id": "sample_09",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_09/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003459999999999991,
+      "first_available_time_s": 0.033346,
+      "last_available_time_s": 179.200014,
+      "source_bytes": 92017520,
+      "proxy_bytes": 54701603,
+      "frames": 5376,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "6179580435e0ecb0a2bf1762be61b33ee9af1eaf9a323e3899ffd167f180c83e",
+      "signature": {
+        "source_sha256": "32d383ca90500c7e72312d2a23168e0931e1bd0d800d3c632d7eee8153d3875c",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_09_camera4",
+      "sample_id": "sample_09",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_09/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003979999999999956,
+      "first_available_time_s": 0.033398,
+      "last_available_time_s": 179.200035,
+      "source_bytes": 91921740,
+      "proxy_bytes": 54445343,
+      "frames": 5376,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "fb9d4ee6d6eff0208eb1f53abeb9c0f93beff881ef463ab2aed53f635a6e3dad",
+      "signature": {
+        "source_sha256": "0e6a0448a61857df97940f3ac2466d2e619920df68f751bee9e3223aa17d06d1",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_09_camera5",
+      "sample_id": "sample_09",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_09/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00037199999999999733,
+      "first_available_time_s": 0.033372,
+      "last_available_time_s": 179.200023,
+      "source_bytes": 91897040,
+      "proxy_bytes": 51910136,
+      "frames": 5376,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "034973ba978d753f90e525f19f5be76d75a80c7988cd64e9b7d4a831629d66b4",
+      "signature": {
+        "source_sha256": "b4e7dfb0dcded15531f6cb7cd7a93521269c2197c88f79a7fe7f2c1fe89a67ed",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_10_camera0",
+      "sample_id": "sample_10",
+      "camera_id": "camera0",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_10/camera0.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003439999999999971,
+      "first_available_time_s": 0.033344,
+      "last_available_time_s": 179.233369,
+      "source_bytes": 270368878,
+      "proxy_bytes": 50397064,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "373e92eb6e89e23cd647708f9dca40ebdb9a44c2683b29f68bfd13718f5a37f5",
+      "signature": {
+        "source_sha256": "14e3726194d5959056e648c5996b0c5ace089ec03e172aee7d2185dafde7c428",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_10_camera1",
+      "sample_id": "sample_10",
+      "camera_id": "camera1",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_10/camera1.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00035099999999999715,
+      "first_available_time_s": 0.033351,
+      "last_available_time_s": 179.233385,
+      "source_bytes": 253541822,
+      "proxy_bytes": 46796985,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "ddbf3a60a14a442fd92714123c45aae91bdc8b863ab12b70b7fa5d206fddb3ac",
+      "signature": {
+        "source_sha256": "6d0bf4e67802b4c71f5773850a7a0346449b027e0a3f17ecd9099a5d1b29575f",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_10_camera2",
+      "sample_id": "sample_10",
+      "camera_id": "camera2",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_10/camera2.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00033299999999999996,
+      "first_available_time_s": 0.033333,
+      "last_available_time_s": 179.233351,
+      "source_bytes": 231752435,
+      "proxy_bytes": 46672678,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "2c9cff92f112c7d884630427f62484983637a46ae7757d1fb76af3a19a3626a0",
+      "signature": {
+        "source_sha256": "f01649f1d701061298b8d9a040d5e366529c0b608e98ecfc1d069fab832137ec",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_10_camera3",
+      "sample_id": "sample_10",
+      "camera_id": "camera3",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_10/camera3.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.000338999999999999,
+      "first_available_time_s": 0.033339,
+      "last_available_time_s": 179.233362,
+      "source_bytes": 225087793,
+      "proxy_bytes": 46203877,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "67a68b94cd210a8c0d8a4ec8a3c92aea58113382728f7c8f5097f6a4e590b332",
+      "signature": {
+        "source_sha256": "b5aecf996a884907f983a09217b06a9abe372a60dc1fa2cd5ed59b7138f9825d",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_10_camera4",
+      "sample_id": "sample_10",
+      "camera_id": "camera4",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_10/camera4.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.00035500000000000115,
+      "first_available_time_s": 0.033355,
+      "last_available_time_s": 179.233392,
+      "source_bytes": 124012390,
+      "proxy_bytes": 45095779,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "55d9c2b4841dceefbab0a8de198500372c3f2b8ed3cce02a1607f8eef1165b30",
+      "signature": {
+        "source_sha256": "a1a5d66eb50ffb62a322631eaa8282645fcdce853e2609b535e8a5ed32c68911",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    },
+    {
+      "id": "sample_10_camera5",
+      "sample_id": "sample_10",
+      "camera_id": "camera5",
+      "path": "/mnt/cfs/043vmq/video-caption-local/data/cloud_proxies/half-v1/sample_10/camera5.mp4",
+      "width": 800,
+      "height": 650,
+      "source_to_video_offset_s": 0.0003480000000000011,
+      "first_available_time_s": 0.033348,
+      "last_available_time_s": 179.233377,
+      "source_bytes": 100054920,
+      "proxy_bytes": 46231830,
+      "frames": 5377,
+      "max_timestamp_error_s": 0.0,
+      "proxy_sha256": "005ca29cf344257aa4f4c5574136116748be2aa5c4d22fa416f12fd32552d9f8",
+      "signature": {
+        "source_sha256": "47961ac853fc92b2400012652e6ea4d149ec34189160ca21bd4f9f2569dec239",
+        "encoding": {
+          "profile": "half-v1",
+          "dimension_divisor": 2,
+          "codec": "libx264",
+          "crf": 24,
+          "preset": "fast",
+          "pixel_format": "yuv420p",
+          "workers": 4,
+          "threads_per_video": 3,
+          "max_bucket_gb": 8
+        }
+      }
+    }
+  ],
+  "source_bytes": 5125306844,
+  "proxy_bytes": 1851261871
+}

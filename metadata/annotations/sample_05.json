@@ -1,0 +1,91 @@
+[
+  {
+    "video_id": "0bf4f52f-f9ed-a61b-eba8-a76d380359bd",
+    "bold_mark": "A person fills a fountain pen with ink.",
+    "sst": "domestic_services/study/life_operations/fill_fountain_pen_with_ink",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "end_time_s": 55.5,
+        "fine_label": "Fill the fountain pen with ink",
+        "end_frame": 1665,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "end_time_s": 3.0,
+            "fine_label": "Open the pen case and take out the fountain pen",
+            "end_frame": 90,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 3.0,
+            "end_time_s": 13.0,
+            "fine_label": "Unscrew the fountain pen cap and place the cap on the tissue on the desk",
+            "start_frame": 90,
+            "end_frame": 390,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 13.0,
+            "end_time_s": 17.0,
+            "fine_label": "Unscrew the ink bottle cap and place the cap on the desk",
+            "start_frame": 390,
+            "end_frame": 510,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 17.0,
+            "end_time_s": 28.5,
+            "fine_label": "Dip the fountain pen nib into the ink bottle to absorb ink",
+            "start_frame": 510,
+            "end_frame": 855,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 28.5,
+            "end_time_s": 36.0,
+            "fine_label": "Wipe the residual ink on the fountain pen with a tissue",
+            "start_frame": 855,
+            "end_frame": 1080,
+            "is_success": true
+          },
+          {
+            "segment_id": "6",
+            "start_time_s": 36.0,
+            "end_time_s": 46.0,
+            "fine_label": "Screw the pen cap back onto the fountain pen to cover the nib and finish assembly",
+            "start_frame": 1080,
+            "end_frame": 1380,
+            "is_success": true
+          },
+          {
+            "segment_id": "7",
+            "start_time_s": 46.0,
+            "end_time_s": 51.5,
+            "fine_label": "Place the assembled fountain pen back into the pen case",
+            "start_frame": 1380,
+            "end_frame": 1545,
+            "is_success": true
+          },
+          {
+            "segment_id": "8",
+            "start_time_s": 51.5,
+            "end_time_s": 55.5,
+            "fine_label": "Screw the cap back onto the ink bottle",
+            "start_frame": 1545,
+            "end_frame": 1665,
+            "is_success": true
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1785149939921049000"
+    }
+  }
+]

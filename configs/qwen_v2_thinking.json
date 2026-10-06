@@ -1,0 +1,31 @@
+{
+  "evidence_run": "qwen-sample01-v2-video-r3",
+  "sample": "sample_01",
+  "camera": "camera2",
+  "task_ids": [
+    "sample_01_seg02_sub01__camera2",
+    "sample_01_seg02_sub02__camera2",
+    "sample_01_seg02_sub10__camera2",
+    "sample_01_seg02_sub11__camera2",
+    "sample_01_seg02_sub12__camera2"
+  ],
+  "prompt_file": "prompts/sample01_v2_r3.txt",
+  "sampling_fps": 6,
+  "frame_max_pixels": 512000,
+  "max_new_tokens": 4096,
+  "caption_max_tokens": 512,
+  "max_request_bytes": 2147483648,
+  "cpu_threads": 4,
+  "groups": {
+    "off": {
+      "run_id": "qwen-sample01-v2-video-r3-think-off",
+      "thinking": false
+    },
+    "on": {
+      "run_id": "qwen-sample01-v2-video-r3-think-on",
+      "thinking": true
+    }
+  },
+  "retired": true,
+  "retirement_note": "实验生成阶段已结束；当前只保留官方基础种子 20261006 的四档结果。后续生成必须使用新的运行编号。"
+}

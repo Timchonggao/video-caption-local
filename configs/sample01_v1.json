@@ -1,0 +1,21 @@
+{
+  "run_id": "qwen-sample01-v1",
+  "prompt_id": "baseline-v1",
+  "prompt_file": "prompts/sample01_baseline_v1.txt",
+  "provider": "qwen",
+  "sample": "sample_01",
+  "expected_clips": 24,
+  "expected_tasks": 144,
+  "frames": 12,
+  "sampling": "uniform_half_open_original_subsegment_nearest_real_pts",
+  "max_deviation_s": 1.0,
+  "max_pixels": 512000,
+  "max_new_tokens": 256,
+  "max_request_bytes": 536870912,
+  "background": "none",
+  "contextual": false,
+  "structured": false,
+  "window_seconds": null,
+  "sampling_fps": null,
+  "cpu_threads": 4
+}

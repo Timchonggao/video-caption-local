@@ -1,0 +1,13 @@
+name = "video-caption-dashboard"
+compatibility_date = "2026-10-02"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "caption-dashboard"
+database_id = "8509d0d7-9004-4089-aebb-9116ffd6678c"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "VIDEOS"
+bucket_name = "caption-dashboard-videos"

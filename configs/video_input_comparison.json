@@ -1,0 +1,28 @@
+{
+  "sample": "sample_01",
+  "camera": "camera2",
+  "evidence_run": "qwen-sample01-v2-prompt-r2",
+  "task_ids": [
+    "sample_01_seg02_sub01__camera2",
+    "sample_01_seg02_sub02__camera2",
+    "sample_01_seg02_sub10__camera2",
+    "sample_01_seg02_sub11__camera2",
+    "sample_01_seg02_sub12__camera2"
+  ],
+  "frames": 12,
+  "sampling_fps": 6,
+  "frame_max_pixels": 512000,
+  "max_new_tokens": 512,
+  "max_request_bytes": 2147483648,
+  "max_deviation_s": 1,
+  "cpu_threads": 4,
+  "groups": {
+    "D": {
+      "run_id": "qwen-sample01-v2-video-r3",
+      "input_mode": "video",
+      "prompt_file": "prompts/sample01_v2_r3.txt"
+    }
+  },
+  "retired": true,
+  "accepted_run_id": "qwen-sample01-v2-video-r3"
+}

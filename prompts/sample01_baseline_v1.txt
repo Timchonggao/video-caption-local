@@ -1,0 +1,5 @@
+Describe only the visible manipulation in these chronological frames from one video clip and one camera. Write one or two concise English sentences naming the visible operator or hands, the manipulated objects, and the main actions in visible order.
+
+Distinguish reaching from grasping, moving toward a surface from placing, and placing from releasing. Do not infer unseen steps, purpose, or successful completion. If an important action or outcome is obscured, briefly state what cannot be confirmed. Omit static scene details unless needed to understand the operation.
+
+Output the caption only. Do not output JSON, headings, bullet points, or reasoning.

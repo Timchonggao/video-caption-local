@@ -1,0 +1,369 @@
+[
+  {
+    "video_id": "7d0bea51-d25e-931d-9973-57b27d0910f8",
+    "bold_mark": "Place a shopping basket in front of the snack shelf in the supermarket, pick snacks from the shelf one by one, check the packaging, and put the selected snacks into the basket.",
+    "sst": "business/retail_business/supermarket/daily_work",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "end_time_s": 179.5,
+        "fine_label": "Select snacks",
+        "end_frame": 5385,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "end_time_s": 2.0,
+            "fine_label": "Place the shopping basket on the ground in front of you",
+            "end_frame": 60,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 2.0,
+            "end_time_s": 4.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 60,
+            "end_frame": 135,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 4.5,
+            "end_time_s": 8.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 135,
+            "end_frame": 240,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 8.0,
+            "end_time_s": 12.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 240,
+            "end_frame": 360,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 12.0,
+            "end_time_s": 17.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 360,
+            "end_frame": 510,
+            "is_success": true
+          },
+          {
+            "segment_id": "6",
+            "start_time_s": 17.0,
+            "end_time_s": 21.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 510,
+            "end_frame": 630,
+            "is_success": true
+          },
+          {
+            "segment_id": "7",
+            "start_time_s": 21.5,
+            "end_time_s": 26.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 645,
+            "end_frame": 780,
+            "is_success": true
+          },
+          {
+            "segment_id": "8",
+            "start_time_s": 26.5,
+            "end_time_s": 31.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 795,
+            "end_frame": 930,
+            "is_success": true
+          },
+          {
+            "segment_id": "9",
+            "start_time_s": 31.5,
+            "end_time_s": 36.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 945,
+            "end_frame": 1095,
+            "is_success": true
+          },
+          {
+            "segment_id": "10",
+            "start_time_s": 37.0,
+            "end_time_s": 42.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 1110,
+            "end_frame": 1260,
+            "is_success": true
+          },
+          {
+            "segment_id": "11",
+            "start_time_s": 42.5,
+            "end_time_s": 47.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 1275,
+            "end_frame": 1410,
+            "is_success": true
+          },
+          {
+            "segment_id": "12",
+            "start_time_s": 47.5,
+            "end_time_s": 53.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 1425,
+            "end_frame": 1590,
+            "is_success": true
+          },
+          {
+            "segment_id": "13",
+            "start_time_s": 53.5,
+            "end_time_s": 58.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 1605,
+            "end_frame": 1740,
+            "is_success": true
+          },
+          {
+            "segment_id": "14",
+            "start_time_s": 58.5,
+            "end_time_s": 63.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 1755,
+            "end_frame": 1890,
+            "is_success": true
+          },
+          {
+            "segment_id": "15",
+            "start_time_s": 63.5,
+            "end_time_s": 69.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 1905,
+            "end_frame": 2070,
+            "is_success": true
+          },
+          {
+            "segment_id": "16",
+            "start_time_s": 69.5,
+            "end_time_s": 75.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 2085,
+            "end_frame": 2265,
+            "is_success": true
+          },
+          {
+            "segment_id": "17",
+            "start_time_s": 76.0,
+            "end_time_s": 81.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 2280,
+            "end_frame": 2445,
+            "is_success": true
+          },
+          {
+            "segment_id": "18",
+            "start_time_s": 82.0,
+            "end_time_s": 87.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 2460,
+            "end_frame": 2625,
+            "is_success": true
+          },
+          {
+            "segment_id": "19",
+            "start_time_s": 88.0,
+            "end_time_s": 94.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 2640,
+            "end_frame": 2835,
+            "is_success": true
+          },
+          {
+            "segment_id": "20",
+            "start_time_s": 95.0,
+            "end_time_s": 98.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 2850,
+            "end_frame": 2940,
+            "is_success": true
+          },
+          {
+            "segment_id": "21",
+            "start_time_s": 98.5,
+            "end_time_s": 101.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 2955,
+            "end_frame": 3045,
+            "is_success": true
+          },
+          {
+            "segment_id": "22",
+            "start_time_s": 102.0,
+            "end_time_s": 106.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 3060,
+            "end_frame": 3180,
+            "is_success": true
+          },
+          {
+            "segment_id": "23",
+            "start_time_s": 106.5,
+            "end_time_s": 110.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 3195,
+            "end_frame": 3315,
+            "is_success": true
+          },
+          {
+            "segment_id": "24",
+            "start_time_s": 111.0,
+            "end_time_s": 115.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 3330,
+            "end_frame": 3450,
+            "is_success": true
+          },
+          {
+            "segment_id": "25",
+            "start_time_s": 115.5,
+            "end_time_s": 119.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 3465,
+            "end_frame": 3585,
+            "is_success": true
+          },
+          {
+            "segment_id": "26",
+            "start_time_s": 120.0,
+            "end_time_s": 124.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 3600,
+            "end_frame": 3735,
+            "is_success": true
+          },
+          {
+            "segment_id": "27",
+            "start_time_s": 125.0,
+            "end_time_s": 129.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 3750,
+            "end_frame": 3870,
+            "is_success": true
+          },
+          {
+            "segment_id": "28",
+            "start_time_s": 129.5,
+            "end_time_s": 133.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 3885,
+            "end_frame": 3990,
+            "is_success": true
+          },
+          {
+            "segment_id": "29",
+            "start_time_s": 133.5,
+            "end_time_s": 137.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 4005,
+            "end_frame": 4110,
+            "is_success": true
+          },
+          {
+            "segment_id": "30",
+            "start_time_s": 137.5,
+            "end_time_s": 142.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 4125,
+            "end_frame": 4260,
+            "is_success": true
+          },
+          {
+            "segment_id": "31",
+            "start_time_s": 142.5,
+            "end_time_s": 146.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 4275,
+            "end_frame": 4395,
+            "is_success": true
+          },
+          {
+            "segment_id": "32",
+            "start_time_s": 147.0,
+            "end_time_s": 151.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 4410,
+            "end_frame": 4545,
+            "is_success": true
+          },
+          {
+            "segment_id": "33",
+            "start_time_s": 152.0,
+            "end_time_s": 157.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 4560,
+            "end_frame": 4710,
+            "is_success": true
+          },
+          {
+            "segment_id": "34",
+            "start_time_s": 157.5,
+            "end_time_s": 161.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 4725,
+            "end_frame": 4830,
+            "is_success": true
+          },
+          {
+            "segment_id": "35",
+            "start_time_s": 161.5,
+            "end_time_s": 165.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 4845,
+            "end_frame": 4965,
+            "is_success": true
+          },
+          {
+            "segment_id": "36",
+            "start_time_s": 166.0,
+            "end_time_s": 170.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 4980,
+            "end_frame": 5100,
+            "is_success": true
+          },
+          {
+            "segment_id": "37",
+            "start_time_s": 170.5,
+            "end_time_s": 174.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 5115,
+            "end_frame": 5220,
+            "is_success": true
+          },
+          {
+            "segment_id": "38",
+            "start_time_s": 174.5,
+            "end_time_s": 177.0,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 5235,
+            "end_frame": 5310,
+            "is_success": true
+          },
+          {
+            "segment_id": "39",
+            "start_time_s": 177.0,
+            "end_time_s": 179.5,
+            "fine_label": "Pick up a snack from the shelf, inspect it, and put it into the shopping basket",
+            "start_frame": 5310,
+            "end_frame": 5385
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1785297802913947000"
+    }
+  }
+]

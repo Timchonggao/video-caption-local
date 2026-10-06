@@ -1,0 +1,21 @@
+{
+  "run_id": "doubao-seed21-lite-sample01-files-default-sub01-20261007",
+  "model": "doubao-seed-2-1-lite-260915",
+  "prompt_id": "baseline-v2",
+  "prompt_file": "prompts/sample01_v2_r3.txt",
+  "sample": "sample_01",
+  "camera": "camera2",
+  "transport": "files",
+  "requested_fps": 5,
+  "max_new_tokens": 4096,
+  "max_request_bytes": 63000000,
+  "min_frame_tokens": null,
+  "max_frame_tokens": null,
+  "max_video_tokens": null,
+  "file_processing_timeout": 300,
+  "file_poll_interval": 2,
+  "file_expire_days": 7,
+  "tasks": [
+    "sample_01_seg02_sub01__camera2"
+  ]
+}

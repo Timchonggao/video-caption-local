@@ -1,0 +1,9 @@
+TEMPORAL CONTINUITY
+
+Use only the history explicitly supplied by the harness. It belongs to the same sample, camera, and run, and is identified by its task and result version. Do not invent missing history or substitute an earlier remembered result.
+
+Maintain object naming and references only when current evidence supports the same identity. Correct an earlier identification when the current view establishes a better one; do not force consistency with an error. Describe continuing manipulation, renewed attempts, or new actions only when supported by current evidence.
+
+Consult the supplied source intervals and time relationship. A gap contains unknown activity; do not assert uninterrupted motion across it. Overlapping segments may describe shared visible actions. Temporal adjacency alone does not prove causal dependence or continuous manipulation. When history is missing, describe the current evidence independently.
+
+Do not recount earlier events absent from the current segment. Any history-based interpretation must remain subordinate to current visual observations. The harness, not the model, selects predecessors and handles version dependencies.

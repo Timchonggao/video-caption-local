@@ -1,0 +1,12 @@
+{
+  "sample_01": "/mnt/cfs/043vmq/video-caption-local/data/mcap/domestic_services/living_room/clothing_organization/fold_and_store_small_clothes/ec77137417594c55b36af81fdcb7d944.mcap",
+  "sample_02": "/mnt/cfs/043vmq/video-caption-local/data/mcap/domestic_services/kitchen/cooking_and_kitchen/cook_dish/14d4e1e376c54a83b770ebcf2046d79d.mcap",
+  "sample_03": "/mnt/cfs/043vmq/video-caption-local/data/mcap/domestic_services/bathroom/clean/clean_floor_drain/032e3c7fec874fe79de6dd320ab2c037.mcap",
+  "sample_04": "/mnt/cfs/043vmq/video-caption-local/data/mcap/domestic_services/bedroom/life_operations/fold_the_quilt/d64ec0be6d244216beb7aab3737cc60f.mcap",
+  "sample_05": "/mnt/cfs/043vmq/video-caption-local/data/mcap/domestic_services/study/life_operations/fill_fountain_pen_with_ink/e19031c36dc2475595a419c43561cec7.mcap",
+  "sample_06": "/mnt/cfs/043vmq/video-caption-local/data/mcap/business/restaurant/bakery/daily_work/55440b7e461d4e248f2234af4d9e129b.mcap",
+  "sample_07": "/mnt/cfs/043vmq/video-caption-local/data/mcap/business/retail_business/supermarket/daily_work/0b8358724952429d83f561b0e2246b26.mcap",
+  "sample_08": "/mnt/cfs/043vmq/video-caption-local/data/mcap/business/hotel/hotel_room/daily_work/be467a4d11304eb28a805cb84107946e.mcap",
+  "sample_09": "/mnt/cfs/043vmq/video-caption-local/data/mcap/industry/electronics_factory/other/daily_work/5eee52e8c4a746e9be6771020131ebe8.mcap",
+  "sample_10": "/mnt/cfs/043vmq/video-caption-local/data/mcap/industry/toy_factory/other/daily_work/78d340b4684d44f6a5bf0fab7383cec3.mcap"
+}

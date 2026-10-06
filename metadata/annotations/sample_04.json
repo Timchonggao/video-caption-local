@@ -1,0 +1,68 @@
+[
+  {
+    "video_id": "1b3d6017-d46b-bd25-c627-5ba29a5ea63e",
+    "bold_mark": "Fold the quilt on the bed",
+    "sst": "domestic_services/bedroom/life_operations/fold_the_quilt",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "start_time_s": 3.0,
+        "end_time_s": 31.0,
+        "fine_label": "Fold the quilt",
+        "start_frame": 90,
+        "end_frame": 930,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "start_time_s": 3.0,
+            "end_time_s": 9.5,
+            "fine_label": "Tidy up and fold the quilt",
+            "start_frame": 90,
+            "end_frame": 285,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 9.5,
+            "end_time_s": 13.5,
+            "fine_label": "Fold the quilt and tidy up",
+            "start_frame": 285,
+            "end_frame": 405,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 13.5,
+            "end_time_s": 20.5,
+            "fine_label": "Tidy up and fold the quilt",
+            "start_frame": 405,
+            "end_frame": 615,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 20.5,
+            "end_time_s": 26.5,
+            "fine_label": "Tidy up and fold the quilt",
+            "start_frame": 615,
+            "end_frame": 795,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 26.5,
+            "end_time_s": 31.0,
+            "fine_label": "Tidy up and fold the quilt",
+            "start_frame": 795,
+            "end_frame": 930,
+            "is_success": true
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1780180916824816000"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+WINDOW V2 REFINED: CURRENT VISUAL EVIDENCE FIRST
+
+The sample caption and fine_label are fallible background for the ENTIRE original subsegment. They are neither observations nor a checklist of steps to complete in this window. The previous caption is a fallible observation of a DIFFERENT window from this task and camera. No history crosses tasks or cameras. Frame times are relative to the CURRENT window.
+
+Before writing, independently inspect the current frames for the manipulated object, hand/tool contact, motion, and observable ending state. Only then consult background/history for terminology or a visually supported object reference. Do not output this reasoning. Require current-frame support for every factual clause and every structured action or state change. If current evidence does not establish a specific identity, use a broader name consistently in all fields.
+
+OPERATION RELATIONS
+- Keep the hand, tool, manipulated object, and supporting/attached object distinct. Removing a hanger WITH its garment from a rack is different from removing a garment FROM a hanger. If the detachment is hidden, describe the visible movement or held bundle without inventing which attachment changed.
+- Reaching is not grasping; approaching a surface is not placing; touching a surface is not releasing. Describe placing only when support on the destination is established; describe releasing only when loss of the hand's grip/support is visible. An object already resting on a surface establishes a state, not the unseen placement event.
+- Identify anatomical left/right hands only when reliable. Prefer object-relative locations over ambiguous image-relative directions. Camera movement alone does not establish object motion.
+- Do not claim cleanliness, uniform cuts, cooked food, successful completion, or an intended destination merely because they are expected. Describe only the demonstrated state change. Use an empty state_changes array when no supported before/after change is established.
+
+CURRENT-WINDOW HISTORY CHECK
+- Do not repeat an earlier pause, regrasp, adjustment, placement, release, or tool switch unless it occurs in the CURRENT frames. A previous event is not a template for this window.
+- If only the same repeated motion is visible, describe that motion briefly. Similar captions across windows are acceptable when the evidence is similar; never invent novelty to avoid repetition.
+- If frames do not establish continuity, omit claims of uninterrupted activity. Do not copy previous scene details or use history to infer an occluded action.
+- Describe a consequential missing ending precisely, e.g. the garment moves toward the bed but its release is not visible. Avoid generic disclaimers and do not weaken clearly visible actions.
+
+COMPACT OUTPUT
+Return the existing JSON schema only. Prefer one or two action-focused sentences for a simple window; add sentences only for distinct visible operations or consequential uncertainty. Omit static room descriptions, clothing, face masks, camera angle, and other background unless necessary to distinguish the manipulation. Omit purpose phrases such as "to ensure even cooking" or "to prepare for the next step." Merge repeated strokes/stirs into one action entry; do not produce one entry per frame. Do not repeat the full caption in every action's details; use details for additional supported contact, coordination, or transfer information. Keep caption and structured fields consistent. Arrays may be empty. Output no reasoning, markdown, trailing text, or extra quotation marks.

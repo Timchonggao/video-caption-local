@@ -1,0 +1,127 @@
+[
+  {
+    "video_id": "278d887c-5f7e-23a9-22ea-6e90406ae2de",
+    "bold_mark": "Cut the sausage on the cutting board",
+    "sst": "business/restaurant/bakery/daily_work",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "end_time_s": 179.0,
+        "fine_label": "Cut sausages",
+        "end_frame": 5370,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "end_time_s": 8.0,
+            "fine_label": "Cut the remaining sausage on the cutting board",
+            "end_frame": 240,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 8.0,
+            "end_time_s": 17.0,
+            "fine_label": "Put the sliced sausage into the plastic bag",
+            "start_frame": 240,
+            "end_frame": 510,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 17.0,
+            "end_time_s": 22.0,
+            "fine_label": "Take out the whole sausage and place it on the cutting board",
+            "start_frame": 510,
+            "end_frame": 660,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 22.0,
+            "end_time_s": 66.5,
+            "fine_label": "Slice the sausage on the cutting board",
+            "start_frame": 660,
+            "end_frame": 1995,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 66.5,
+            "end_time_s": 74.5,
+            "fine_label": "Put the sliced sausage into the plastic bag",
+            "start_frame": 1995,
+            "end_frame": 2235,
+            "is_success": true
+          },
+          {
+            "segment_id": "6",
+            "start_time_s": 74.5,
+            "end_time_s": 76.5,
+            "fine_label": "Take out the whole sausage and place it on the cutting board",
+            "start_frame": 2235,
+            "end_frame": 2295,
+            "is_success": true
+          },
+          {
+            "segment_id": "7",
+            "start_time_s": 76.5,
+            "end_time_s": 106.0,
+            "fine_label": "Slice the sausage on the cutting board",
+            "start_frame": 2295,
+            "end_frame": 3180,
+            "is_success": true
+          },
+          {
+            "segment_id": "8",
+            "start_time_s": 106.0,
+            "end_time_s": 114.0,
+            "fine_label": "Put the sliced sausage into the plastic bag",
+            "start_frame": 3180,
+            "end_frame": 3420,
+            "is_success": true
+          },
+          {
+            "segment_id": "9",
+            "start_time_s": 114.0,
+            "end_time_s": 116.0,
+            "fine_label": "Take out the whole sausage and place it on the cutting board",
+            "start_frame": 3420,
+            "end_frame": 3480,
+            "is_success": true
+          },
+          {
+            "segment_id": "10",
+            "start_time_s": 116.0,
+            "end_time_s": 158.0,
+            "fine_label": "Slice the sausage on the cutting board",
+            "start_frame": 3480,
+            "end_frame": 4740,
+            "is_success": true
+          },
+          {
+            "segment_id": "11",
+            "start_time_s": 158.0,
+            "end_time_s": 175.5,
+            "fine_label": "Gather the remaining sausage into the bag and discard the empty packaging",
+            "start_frame": 4740,
+            "end_frame": 5265,
+            "is_success": true
+          },
+          {
+            "segment_id": "12",
+            "start_time_s": 175.5,
+            "end_time_s": 179.0,
+            "fine_label": "Wipe the hands and organize the sausage bag",
+            "start_frame": 5265,
+            "end_frame": 5370,
+            "is_success": true
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1782603975651127000"
+    }
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "profile": "half-v1",
+  "dimension_divisor": 2,
+  "codec": "libx264",
+  "crf": 24,
+  "preset": "fast",
+  "pixel_format": "yuv420p",
+  "workers": 4,
+  "threads_per_video": 3,
+  "max_bucket_gb": 8
+}

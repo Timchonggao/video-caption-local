@@ -1,0 +1,12 @@
+diff --git a/mcap_decoder.py b/mcap_decoder.py
+index 3353d2f..214afa5 100644
+--- a/mcap_decoder.py
++++ b/mcap_decoder.py
+@@ -7,7 +7,7 @@ def parse_mcap(mcap_file, output_dir=None, camera_topic="/robot0/sensor/camera0/
+     bag = McapLoader(mcap_file)
+     print("Topics:")
+     for topic in bag.all_topic_names:
+-        print(f"  {topic}: {bag.topic_schemas.get(topic)} ({bag.topic_statistics.channel_message_counts.get(next((c.id for c in bag._mcap_reader.get_summary().channels.values() if c.topic == topic), 0), 0)} messages)")
++        print(f"  {topic}: {bag.topic_schemas.get(topic)}")
+     # Because loading all topics requires a significant amount of memory, it is recommended to specify the list of specific topics to be loaded as needed.
+     # bag.load_topics(bag.all_topic_names, auto_sync=False)

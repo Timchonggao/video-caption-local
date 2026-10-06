@@ -1,0 +1,29 @@
+{
+  "name": "video-caption-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "wrangler pages dev dist",
+    "test": "vitest run tests/api.test.ts tests/resultAvailability.test.ts",
+    "deploy": "npm run build && wrangler pages deploy dist",
+    "test:browser": "playwright test",
+    "serve:local": "python ../scripts/serve_dashboard.py"
+  },
+  "dependencies": {
+    "@fontsource/noto-sans-sc": "^5.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261002.1",
+    "@playwright/test": "^1.55.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.8.0",
+    "vite": "^8.0.0",
+    "vitest": "^5.0.3",
+    "wrangler": "4.147.0"
+  }
+}

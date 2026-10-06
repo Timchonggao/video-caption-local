@@ -1,0 +1,6 @@
+{
+  "dataset_root": "/path/to/mcap-dataset",
+  "media_root": "/path/to/extracted-media",
+  "model_path": "/path/to/Qwen3.8-27B",
+  "proxy_root": "/path/to/cloud-video-proxies"
+}

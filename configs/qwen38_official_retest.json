@@ -1,0 +1,50 @@
+{
+  "evidence_run": "qwen-sample01-v2-video-r3",
+  "sample": "sample_01",
+  "camera": "camera2",
+  "prompt_file": "prompts/sample01_v2_r3.txt",
+  "task_ids": [
+    "sample_01_seg02_sub01__camera2",
+    "sample_01_seg02_sub02__camera2",
+    "sample_01_seg02_sub10__camera2",
+    "sample_01_seg02_sub11__camera2",
+    "sample_01_seg02_sub12__camera2"
+  ],
+  "seeds": [
+    20261006
+  ],
+  "sampling_fps": 6,
+  "frame_max_pixels": 512000,
+  "max_new_tokens": 4096,
+  "caption_max_tokens": 512,
+  "max_request_bytes": 2147483648,
+  "cpu_threads": 4,
+  "profiles": {
+    "off": {
+      "thinking": false,
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "presence_penalty": 1.5
+    },
+    "low": {
+      "thinking": true,
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "presence_penalty": 0
+    },
+    "medium": {
+      "thinking": true,
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "presence_penalty": 0
+    },
+    "xhigh": {
+      "thinking": true,
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "presence_penalty": 0
+    }
+  },
+  "retired": true,
+  "retirement_note": "实验生成阶段已结束；当前只保留官方基础种子 20261006 的四档结果。后续生成必须使用新的运行编号。"
+}

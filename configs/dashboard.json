@@ -1,0 +1,4 @@
+{
+  "hidden_runs": ["qwen-sample01-v2-video-r3"],
+  "note": "早期视频基线仅保留为高清采样证据来源，不作为当前 caption 实验选项。"
+}

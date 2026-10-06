@@ -1,0 +1,12 @@
+{
+  "run_id":"doubao-seed21-lite-sample01-video-r3",
+  "model":"doubao-seed-2-1-lite-260915",
+  "prompt_id":"baseline-v2",
+  "prompt_file":"prompts/sample01_v2_r3.txt",
+  "sample":"sample_01",
+  "camera":"camera2",
+  "requested_fps":5,
+  "max_new_tokens":512,
+  "max_request_bytes":63000000,
+  "tasks":["sample_01_seg02_sub01__camera2","sample_01_seg02_sub02__camera2","sample_01_seg02_sub10__camera2","sample_01_seg02_sub11__camera2","sample_01_seg02_sub12__camera2"]
+}

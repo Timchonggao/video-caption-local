@@ -1,0 +1,128 @@
+[
+  {
+    "video_id": "0703cf28-746c-a814-e737-3bda3fe7d388",
+    "bold_mark": "Organize the green woven ribbon, bag it, and set it aside, then sew the fabric to make doll parts",
+    "sst": "industry/toy_factory/other/daily_work",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "end_time_s": 121.0,
+        "fine_label": "Organize the webbing",
+        "end_frame": 3630,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "end_time_s": 3.5,
+            "fine_label": "Open the woven ribbon packaging bag",
+            "end_frame": 105,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 3.5,
+            "end_time_s": 8.0,
+            "fine_label": "Spread the packaging bag flat on the tabletop",
+            "start_frame": 105,
+            "end_frame": 240,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 8.0,
+            "end_time_s": 50.0,
+            "fine_label": "Take out the woven ribbon, count the pieces, and place them in the tray",
+            "start_frame": 240,
+            "end_frame": 1500,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 50.0,
+            "end_time_s": 72.0,
+            "fine_label": "Take out the woven ribbon, count the pieces, and place them in the tray",
+            "start_frame": 1500,
+            "end_frame": 2160,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 72.0,
+            "end_time_s": 82.5,
+            "fine_label": "Bag the remaining woven ribbon and place it on one side of the tabletop",
+            "start_frame": 2160,
+            "end_frame": 2475,
+            "is_success": true
+          },
+          {
+            "segment_id": "6",
+            "start_time_s": 82.5,
+            "end_time_s": 121.0,
+            "fine_label": "Organize the woven ribbon in the tray, align and count the pieces",
+            "start_frame": 2475,
+            "end_frame": 3630,
+            "is_success": true
+          }
+        ]
+      },
+      {
+        "segment_id": "2",
+        "start_time_s": 121.0,
+        "end_time_s": 179.5,
+        "fine_label": "Sew the doll",
+        "start_frame": 3630,
+        "end_frame": 5385,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "start_time_s": 121.0,
+            "end_time_s": 131.0,
+            "fine_label": "Take out the plush fabric, spread it flat on the tabletop",
+            "start_frame": 3630,
+            "end_frame": 3930,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 131.0,
+            "end_time_s": 135.0,
+            "fine_label": "Take out the printed fabric and lay it over the plush fabric",
+            "start_frame": 3930,
+            "end_frame": 4050,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 135.0,
+            "end_time_s": 164.0,
+            "fine_label": "Sew the printed fabric to the plush fabric",
+            "start_frame": 4050,
+            "end_frame": 4920,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 164.0,
+            "end_time_s": 174.5,
+            "fine_label": "Sew the woven ribbon onto the fabric",
+            "start_frame": 4920,
+            "end_frame": 5235,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 174.5,
+            "end_time_s": 179.5,
+            "fine_label": "Pick up the long woven ribbon, organize it, and prepare for sewing",
+            "start_frame": 5235,
+            "end_frame": 5385,
+            "is_success": true
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1784981349923649000"
+    }
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "video_id": "c5b5de43-ded4-6c16-1955-00c54d4ceda2",
+    "bold_mark": "Stir-fry the yardlong beans, then plate the cooked beans and place them on the tabletop.",
+    "sst": "domestic_services/kitchen/cooking_and_kitchen/cook_dish",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "end_time_s": 158.5,
+        "fine_label": "Stir-fry green beans",
+        "end_frame": 4755,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "end_time_s": 3.0,
+            "fine_label": "Turn on the gas stove",
+            "end_frame": 90,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 3.0,
+            "end_time_s": 11.0,
+            "fine_label": "Pour the beans into the pot",
+            "start_frame": 90,
+            "end_frame": 330,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 11.0,
+            "end_time_s": 15.0,
+            "fine_label": "Stir-fry the green beans",
+            "start_frame": 330,
+            "end_frame": 450,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 15.0,
+            "end_time_s": 21.0,
+            "fine_label": "Add seasoning to the wok",
+            "start_frame": 450,
+            "end_frame": 630,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 21.0,
+            "end_time_s": 96.5,
+            "fine_label": "Stir-fry the cowpeas until fully cooked",
+            "start_frame": 630,
+            "end_frame": 2895,
+            "is_success": true
+          },
+          {
+            "segment_id": "6",
+            "start_time_s": 96.5,
+            "end_time_s": 98.5,
+            "fine_label": "Turn off the gas stove",
+            "start_frame": 2895,
+            "end_frame": 2955,
+            "is_success": true
+          },
+          {
+            "segment_id": "7",
+            "start_time_s": 98.5,
+            "end_time_s": 157.0,
+            "fine_label": "Plate the yardlong beans onto a dish",
+            "start_frame": 2955,
+            "end_frame": 4710,
+            "is_success": true
+          },
+          {
+            "segment_id": "8",
+            "start_time_s": 157.0,
+            "end_time_s": 158.5,
+            "fine_label": "Put the plate on the countertop",
+            "start_frame": 4710,
+            "end_frame": 4755,
+            "is_success": true
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1783326106624529000"
+    }
+  }
+]

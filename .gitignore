@@ -1,0 +1,32 @@
+# Local caption runs and generated reports
+runs/
+reports/
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Machine-specific paths and credentials
+configs/paths.json
+.env
+.env.*
+!.env.example
+
+# Dashboard dependencies, build output, local state, and credentials
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.wrangler/
+dashboard/.local/
+dashboard/.cloudflare.env
+dashboard/.dev.vars
+dashboard/test-results/
+dashboard/playwright-report/
+
+# Editors and operating-system files
+.DS_Store
+.idea/
+.vscode/

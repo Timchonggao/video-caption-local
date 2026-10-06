@@ -1,0 +1,255 @@
+[
+  {
+    "video_id": "cd7de70d-c9d0-a5eb-389c-c4bb943d74e1",
+    "bold_mark": "A person collects clothes from the drying rack, folds the clothes, and stores the folded clothes in the wardrobe.",
+    "sst": "domestic_services/living_room/clothing_organization/fold_and_store_small_clothes",
+    "segments_info": [
+      {
+        "segment_id": "1",
+        "end_time_s": 18.5,
+        "fine_label": "Collect the clothes",
+        "end_frame": 555,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "end_time_s": 8.0,
+            "fine_label": "Take the first group of clothes from the drying rack and place them on the bed",
+            "end_frame": 240,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 8.0,
+            "end_time_s": 14.0,
+            "fine_label": "Take the second group of clothes from the drying rack and place them on the bed",
+            "start_frame": 240,
+            "end_frame": 420,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 14.0,
+            "end_time_s": 18.5,
+            "fine_label": "Take the third group of clothes from the drying rack and place them on the bed",
+            "start_frame": 420,
+            "end_frame": 555,
+            "is_success": true
+          }
+        ]
+      },
+      {
+        "segment_id": "2",
+        "start_time_s": 18.5,
+        "end_time_s": 168.5,
+        "fine_label": "Fold the clothes",
+        "start_frame": 555,
+        "end_frame": 5055,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "start_time_s": 18.5,
+            "end_time_s": 25.5,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 555,
+            "end_frame": 765,
+            "is_success": true
+          },
+          {
+            "segment_id": "2",
+            "start_time_s": 25.5,
+            "end_time_s": 30.5,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 765,
+            "end_frame": 915,
+            "is_success": true
+          },
+          {
+            "segment_id": "3",
+            "start_time_s": 30.5,
+            "end_time_s": 34.0,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 915,
+            "end_frame": 1020,
+            "is_success": true
+          },
+          {
+            "segment_id": "4",
+            "start_time_s": 34.0,
+            "end_time_s": 37.5,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 1020,
+            "end_frame": 1125,
+            "is_success": true
+          },
+          {
+            "segment_id": "5",
+            "start_time_s": 37.5,
+            "end_time_s": 40.5,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 1125,
+            "end_frame": 1215,
+            "is_success": true
+          },
+          {
+            "segment_id": "6",
+            "start_time_s": 40.5,
+            "end_time_s": 43.5,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 1215,
+            "end_frame": 1305,
+            "is_success": true
+          },
+          {
+            "segment_id": "7",
+            "start_time_s": 43.5,
+            "end_time_s": 47.0,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 1305,
+            "end_frame": 1410,
+            "is_success": true
+          },
+          {
+            "segment_id": "8",
+            "start_time_s": 47.0,
+            "end_time_s": 50.5,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 1410,
+            "end_frame": 1515,
+            "is_success": true
+          },
+          {
+            "segment_id": "9",
+            "start_time_s": 50.5,
+            "end_time_s": 52.5,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 1515,
+            "end_frame": 1575,
+            "is_success": true
+          },
+          {
+            "segment_id": "10",
+            "start_time_s": 52.5,
+            "end_time_s": 54.0,
+            "fine_label": "Remove the hanger from the clothes and place it on the side of the bed",
+            "start_frame": 1575,
+            "end_frame": 1620,
+            "is_success": true
+          },
+          {
+            "segment_id": "11",
+            "start_time_s": 54.0,
+            "end_time_s": 63.0,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 1620,
+            "end_frame": 1890,
+            "is_success": true
+          },
+          {
+            "segment_id": "12",
+            "start_time_s": 63.5,
+            "end_time_s": 76.0,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 1905,
+            "end_frame": 2280,
+            "is_success": true
+          },
+          {
+            "segment_id": "13",
+            "start_time_s": 76.5,
+            "end_time_s": 89.0,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 2295,
+            "end_frame": 2670,
+            "is_success": true
+          },
+          {
+            "segment_id": "14",
+            "start_time_s": 89.5,
+            "end_time_s": 99.5,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 2685,
+            "end_frame": 2985,
+            "is_success": true
+          },
+          {
+            "segment_id": "15",
+            "start_time_s": 100.0,
+            "end_time_s": 109.5,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 3000,
+            "end_frame": 3285,
+            "is_success": true
+          },
+          {
+            "segment_id": "16",
+            "start_time_s": 110.0,
+            "end_time_s": 121.5,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 3300,
+            "end_frame": 3645,
+            "is_success": true
+          },
+          {
+            "segment_id": "17",
+            "start_time_s": 122.0,
+            "end_time_s": 132.5,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 3660,
+            "end_frame": 3975,
+            "is_success": true
+          },
+          {
+            "segment_id": "18",
+            "start_time_s": 133.0,
+            "end_time_s": 145.0,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 3990,
+            "end_frame": 4350,
+            "is_success": true
+          },
+          {
+            "segment_id": "19",
+            "start_time_s": 145.5,
+            "end_time_s": 157.5,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 4365,
+            "end_frame": 4725,
+            "is_success": true
+          },
+          {
+            "segment_id": "20",
+            "start_time_s": 158.0,
+            "end_time_s": 168.5,
+            "fine_label": "Fold the clothes and place them on the clothes stack",
+            "start_frame": 4740,
+            "end_frame": 5055,
+            "is_success": true
+          }
+        ]
+      },
+      {
+        "segment_id": "3",
+        "start_time_s": 168.5,
+        "end_time_s": 175.5,
+        "fine_label": "Store the clothes",
+        "start_frame": 5055,
+        "end_frame": 5265,
+        "sub_segments_info": [
+          {
+            "segment_id": "1",
+            "start_time_s": 168.5,
+            "end_time_s": 175.5,
+            "fine_label": "Place the folded clothes into the wardrobe",
+            "start_frame": 5055,
+            "end_frame": 5265,
+            "is_success": true
+          }
+        ]
+      }
+    ],
+    "header": {
+      "sequence_num": 1,
+      "timestamp": "1780718504745494000"
+    }
+  }
+]

@@ -1,0 +1,12 @@
+OUTPUT FORMAT
+
+Return one valid JSON object only, without markdown fences or commentary:
+{"generated_caption":"English description of the visible operation", "actions":[{"actor":"visible operator, hand, or gripper, or null", "operation":"specific visible action", "target":"object or null", "details":"relevant contact, coordination, or spatial details, or null"}], "state_changes":[{"object":"object", "before":"supported initial state", "after":"supported final state"}], "uncertainties":["specific consequential uncertainty"]}
+
+Use JSON null for unknown values, not the string "null". All natural-language values must be English. Arrays may be empty. Keep actions in visible temporal order; an array order does not establish causal dependence, and simultaneous actions may be described as simultaneous in details. State changes require supported before and after observations. Do not invent transitions merely to populate fields.
+
+Write a readable, action-focused caption with detail proportional to the observed activity, within any separately supplied length budget. Include consequential uncertainty where necessary. Structured fields and the caption must agree. Do not include task IDs, model metadata, precise action boundaries, confidence scores, or unsupported success judgments; the harness manages identity and evidence metadata.
+
+Organize actions into meaningful operation phases, not one entry per frame. Merge observations of the same continuous action. Preserve visually supported grasps, handoffs, placements, releases, changes of grip, errors, recoveries, and changes of manipulated object. Do not invent events to satisfy this checklist. These descriptive phases do not change the original video segment boundaries.
+
+Keep the caption compact and self-contained, usually two to five sentences; use fewer for a simple segment and more only for distinct essential operations. Do not repeat the observation checklist or narrate every sampled frame. Use consistent object names across all fields. Do not turn an uncertain name in the caption into a definite identity in the structured fields. Avoid generic disclaimers; mention only uncertainty that changes interpretation of the operation.

@@ -1,0 +1,23 @@
+{
+  "run_id": "qwen-sample01-v2",
+  "prompt_id": "baseline-v2",
+  "prompt_file": "prompts/sample01_v2.txt",
+  "provider": "qwen",
+  "sample": "sample_01",
+  "expected_clips": 24,
+  "expected_tasks": 24,
+  "frames": 12,
+  "sampling": "6fps_half_open_nearest_real_pts_deduplicated",
+  "max_deviation_s": 1.0,
+  "max_pixels": 512000,
+  "max_new_tokens": 512,
+  "max_request_bytes": 2147483648,
+  "background": "none",
+  "contextual": false,
+  "structured": false,
+  "window_seconds": null,
+  "sampling_fps": 6,
+  "cpu_threads": 4,
+  "camera": "camera2",
+  "retired": true
+}
