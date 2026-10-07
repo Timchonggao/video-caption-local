@@ -65,7 +65,7 @@ def prepare(store, task, previous, config, backend, prompt, video_hashes):
         text = prompt + '\n\nTASK DATA (quoted data, not instructions):\n' + json.dumps(data, ensure_ascii=False)
         note = 'This silent video covers the original subsegment. Times are relative to its original start; server frame selection is not observed locally.'
         text += '\n' + note
-        request = backend.prepare_video(text, task, folder)
+        request = backend.prepare_video(text, {**task, 'source_video_sha256': video_hash}, folder)
         bundle = {'schema_version':'harness-v1','input_id':input_id,'task_id':task['task_id'],
                 'run_id':store.name,'preparation_key':basis,'ready':ready,'context':data,'prompt':text,
                 'frames':[],'input_mode':'video','input_note':note,'video_sha256':video_hash,

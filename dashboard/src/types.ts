@@ -29,6 +29,7 @@ export type Media = {
 };
 export type Inventory = { sample_id: string; media: Media[] };
 export type Run = {
+  release_id?: string;
   experiment_family?: string;
   official_profile?: string | null;
   seed_index?: number | null;
@@ -51,6 +52,9 @@ export type Run = {
   prompt_id: string;
 };
 export type Result = {
+  provider_transport?: "base64" | "files";
+  estimated_cost_cny?: number | null;
+  caption_tokens_note?: string;
   effective_sampling?: {do_sample:boolean;temperature:number;top_p:number;top_k:number;min_p:number;presence_penalty:number;repetition_penalty:number;base_seed:number};
   task_seed?: string;
   reasoning_effort?: string | null;

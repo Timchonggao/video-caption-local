@@ -12,7 +12,7 @@ def export_subsegment(task, path):
         raise ValueError('Invalid video interval')
     path = Path(path)
     points=[]
-    with av.open(task['media_path']) as source, av.open(str(path),'w') as output:
+    with av.open(task['media_path']) as source, av.open(str(path),'w',options={'movie_timescale':'1000000'}) as output:
         source_stream=source.streams.video[0]
         source_stream.codec_context.thread_count=1
         source.seek(int((start-offset)/float(source_stream.time_base)),stream=source_stream,backward=True,any_frame=False)
@@ -40,4 +40,4 @@ def export_subsegment(task, path):
         raise ValueError('Export changed source frame timing')
     return {'sha256':sha(path),'bytes':path.stat().st_size,'source_interval_s':[start,end],
         'source_dimensions':[stream.width,stream.height],'source_frame_count':len(points),'audio':False,
-        'encoding':{'codec':'h264','crf':18,'preset':'veryfast'},'frames':points,'encoded_times_s':encoded}
+        'encoding':{'codec':'h264','crf':18,'preset':'veryfast','movie_timescale':1000000},'frames':points,'encoded_times_s':encoded}

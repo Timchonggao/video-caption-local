@@ -13,6 +13,8 @@ export function ResourceMetrics({ value }: {value?: Result}) {
       <dt>最终 caption 阶段</dt><dd>{seconds(value.caption_seconds)}</dd>
       <dt>输出完整性</dt><dd>思考：{value.thinking_complete ? "完整" : "未结束"}；caption：{value.caption_complete ? "完整" : "未完成"}</dd>
     </>}
+    {value?.provider_transport && <><dt>视频传输</dt><dd>{value.provider_transport === "files" ? "Files API" : "Base64"}</dd></>}
+    {value?.estimated_cost_cny != null && <><dt>费用估算</dt><dd>¥{value.estimated_cost_cny.toFixed(4)}（以账单为准）</dd></>}
     {value?.effective_sampling && <>
       <dt>实际采样参数</dt><dd>T {value.effective_sampling.temperature} · p {value.effective_sampling.top_p} · k {value.effective_sampling.top_k} · presence {value.effective_sampling.presence_penalty}</dd>
       <dt>任务随机种子</dt><dd>{value.task_seed || "未记录"}</dd>

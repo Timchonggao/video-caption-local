@@ -37,6 +37,7 @@ class RunStore:
         self.lock = (self.root / '.lock').open('w')
         fcntl.flock(self.lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         self.name = name
+        self.config = config
         self.tasks = {t['task_id']: t for t in tasks}
         if len(self.tasks) != len(tasks):
             raise ValueError('Duplicate tasks')
@@ -49,7 +50,9 @@ class RunStore:
         if tp.exists() and tp.read_text() != text:
             raise ValueError('Task manifest changed; choose new run ID')
         atomic_text(tp, text)
-        for directory in ('inputs', 'artifacts', 'versions', 'attempts'):
+        from caption_system.results.artifacts import initialize_artifacts
+        initialize_artifacts(self.root, config)
+        for directory in ('inputs', 'versions', 'attempts'):
             (self.root / directory).mkdir(exist_ok=True)
         self.path = self.root / 'results.jsonl'
         self.records = {}
@@ -161,7 +164,8 @@ class RunStore:
 
     def metrics(self):
         statuses = [r['caption_status'] for r in self.records.values()]
-        out = {'tasks': len(self.tasks), 'success': statuses.count('success'), 'failed': statuses.count('failed'), 'pending': len(self.tasks) - statuses.count('success') - statuses.count('failed')}
+        expected = len(self.config.get('experiment_task_ids') or self.tasks)
+        out = {'tasks': expected, 'success': statuses.count('success'), 'failed': statuses.count('failed'), 'pending': expected - statuses.count('success') - statuses.count('failed')}
         atomic_json(self.root / 'metrics.json', out)
 
     def close(self):

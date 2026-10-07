@@ -86,3 +86,32 @@ class DoubaoVideoTests(unittest.TestCase):
                                ('--min-frame-tokens','128'),('--max-frame-tokens','384'),('--max-video-tokens','32768')]:
                 self.assertEqual(cmd[cmd.index(flag)+1],value)
             self.assertNotIn('--apply',cmd)
+
+    def test_entry_defaults_to_base64_without_generation_overrides(self):
+        import runpy,sys
+        from caption_system.config import PROJECT
+        entry=runpy.run_path(str(PROJECT/'scripts/run_doubao_video_r3.py'))
+        with patch.object(sys,'argv',['run_doubao_video_r3.py','--all']), patch('subprocess.run') as run:
+            entry['main']()
+        cmd=run.call_args.args[0]
+        self.assertEqual(cmd[cmd.index('--video-transport')+1],'base64')
+        self.assertEqual(cmd[cmd.index('--run')+1],'doubao-seed21-lite-sample01-video-r3')
+        self.assertEqual(cmd[cmd.index('--limit')+1],'5')
+        for flag in ['--min-frame-tokens','--max-frame-tokens','--max-video-tokens',
+                     '--temperature','--top-p','--apply']:
+            self.assertNotIn(flag,cmd)
+
+    def test_default_files_archive_selects_its_single_task_without_budgets(self):
+        import runpy,sys
+        from caption_system.config import PROJECT
+        entry=runpy.run_path(str(PROJECT/'scripts/run_doubao_video_r3.py'))
+        path=PROJECT/'configs/doubao_files_default_sub01_20261007.json'
+        with patch.object(sys,'argv',['run_doubao_video_r3.py','--config',str(path)]), patch('subprocess.run') as run:
+            entry['main']()
+        cmd=run.call_args.args[0]
+        self.assertEqual(cmd[cmd.index('--task-id')+1],'sample_01_seg02_sub01__camera2')
+        self.assertEqual(cmd[cmd.index('--video-transport')+1],'files')
+        self.assertEqual(cmd[cmd.index('--max-calls')+1],'1')
+        for flag in ['--min-frame-tokens','--max-frame-tokens','--max-video-tokens',
+                     '--temperature','--top-p','--apply']:
+            self.assertNotIn(flag,cmd)

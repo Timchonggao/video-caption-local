@@ -47,9 +47,9 @@ function ModelCaption({
   const entry = entries.find(entry => entry.run.id === chosen?.id);
   const run = entry?.run,
     value = entry?.value;
-  const sample = run?.sample || data.experiment?.sample || "sample_01";
+  const sample = run?.release_id === "v2_1" ? "全数据集" : run?.release_id === "v3" ? "10 个样本首片段" : run?.sample || data.experiment?.sample || "sample_01";
   const tasks = new Set(
-    data.tasks.filter((t) => t.sample_id === sample && (!run?.camera || t.camera_id === run.camera)).map((t) => t.task_id),
+    data.tasks.filter((t) => (["v2_1", "v3"].includes(run?.release_id || "") || t.sample_id === sample) && (!run?.camera || t.camera_id === run.camera)).map((t) => t.task_id),
   );
   const plannedTasks = new Set(run?.experiment_task_ids || [...tasks]);
   const results = data.results.filter(
@@ -61,17 +61,18 @@ function ModelCaption({
   const failed = new Set(
     results.filter((r) => r.caption_status === "failed").map((r) => r.task_id),
   ).size;
-  if (data.presentation?.mode === "mentor" || official.length > 0) return <CaptionPanel entries={entries} run={run} value={value}
+  if (data.presentation?.mode === "mentor" || official.length > 0 || run?.release_id === "v2_1") return <CaptionPanel entries={entries} run={run} value={value}
     task={`${clip.clip_id}__${camera}`} camera={camera} review={review} selectRun={selectRun}
     experimentProgress={data.presentation?.mode === "mentor" ? undefined : <p className="experiment-progress" role="status">
-      {sample}：{run?.experiment_task_ids ? "本轮五段 " : ""}已生成 {success}／{plannedTasks.size}，失败 {failed}
-      {run?.experiment_task_ids && <span>；全样本 {tasks.size} 条，剩余任务不在本轮范围</span>}
+      {sample}：{run?.release_id === "v2_1" ? `${run.model_key === "qwen" ? run.official_profile : run.thinking_comparison_role} · ` : run?.release_id === "v3" ? "" : run?.experiment_task_ids ? "本轮五段 " : ""}已生成 {success}／{plannedTasks.size}，失败 {failed}
+      {!['v2_1', 'v3'].includes(run?.release_id || '') && run?.experiment_task_ids && <span>；全样本 {tasks.size} 条，剩余任务不在本轮范围</span>}
     </p>}/>;
   if (compareCD && hasCD) return <article className="model-caption"><button onClick={()=>setCompareCD(false)}>返回单组查看</button><CDComparison entries={entries} camera={camera} review={review}/></article>;
   return (
     <article className="model-caption">
       <h2>{run?.model_label || label}</h2>
-      {run?.display_name && !official.length && <p className="experiment-scope">{run.display_name}</p>}
+      {run?.release_id === "v3" ? <p className="experiment-scope">独立窗口 · 无历史 · 多窗口文字汇总</p>
+        : run?.display_name && !official.length && <p className="experiment-scope">{run.display_name}</p>}
       {hasCD && <button onClick={()=>setCompareCD(true)}>并排比较 C / D</button>}
       {run?.model_name &&
         !/^[a-f0-9]{32,64}$/.test(run.model_name) &&
@@ -95,10 +96,11 @@ function ModelCaption({
         </label>
       )}
       {run ? <p className="experiment-progress" role="status">
-        {sample}：{run?.experiment_task_ids ? "本轮五段 " : ""}已生成 {success}／{plannedTasks.size}，失败 {failed}
-        {run?.experiment_task_ids && <span>；全样本 {tasks.size} 条，剩余任务不在本轮范围</span>}
+        {sample}：{run?.release_id === "v2_1" ? `${run.model_key === "qwen" ? run.official_profile : run.thinking_comparison_role} · ` : run?.release_id === "v3" ? "" : run?.experiment_task_ids ? "本轮五段 " : ""}已生成 {success}／{plannedTasks.size}，失败 {failed}
+        {!['v2_1', 'v3'].includes(run?.release_id || '') && run?.experiment_task_ids && <span>；全样本 {tasks.size} 条，剩余任务不在本轮范围</span>}
       </p> : <p className="experiment-progress" role="status">当前样本尚无此模型的结果</p>}
-      {clip.sample_id !== sample && (
+      {run?.release_id === "v3" && !plannedTasks.has(`${clip.clip_id}__${camera}`) && <p className="experiment-scope">本轮只生成各样本的第一个原始子片段；其他片段保留视频和原始标注。</p>}
+      {run?.release_id !== "v3" && clip.sample_id !== sample && (
         <p className="experiment-scope">
           当前实验范围是 {sample}；此样本可浏览视频和原始标注。
         </p>
@@ -130,6 +132,7 @@ function ModelCaption({
                   秒
                 </strong>
                 <p>{w.generated_caption || w.caption_status}</p>
+                {run?.release_id === "v3" && <small>实际采样 {w.sampled_times_s?.length || 0} 帧 · 时间相对此窗口起点</small>}
                 <details>
                   <summary>证据与版本</summary>
                   <pre>{JSON.stringify(w, null, 2)}</pre>
@@ -139,11 +142,11 @@ function ModelCaption({
           </details>
         )}
         {value?.caption_status === "success" && <details className="caption-details"><summary>资源效率</summary><ResourceMetrics value={value}/><small>{value.provider_sampling_known === false ? "API 请求耗时含传输及服务处理，不等同于本地 GPU 生成耗时。" : "模型生成耗时，不等同于完整任务耗时。"}</small></details>}
-        <SamplingInput
+        {run?.release_id !== "v3" && <SamplingInput
           run={run?.id}
           task={`${clip.clip_id}__${camera}`}
           result={value?.result_id}
-        />
+        />}
         {value?.caption_status === "success" && run && (
           <button onClick={() => review(camera, run.id)}>评价此结果</button>
         )}
@@ -176,13 +179,16 @@ export function ModelComparison({
     { key: "v1", id: "baseline-v1", label: "v1 · 纯视觉基线" },
     ...[...new Set(data.runs.map((r) => r.prompt_id))]
       .filter((id) => id !== "baseline-v1")
-      .map((id) => ({ key: id === "baseline-v2" ? "v2" : id, id, label: id === "baseline-v2" ? "v2 · 连续操作" : id })),
+      .map((id) => ({ key: id === "v3-window-r1" ? "v3" : id === "baseline-v2-1" ? "v2_1" : id === "baseline-v2" ? "v2" : id, id, label: id === "v3-window-r1" ? "v3 · 5 秒窗口试验" : id === "baseline-v2-1" ? "v2.1 · 2 fps 全量" : id === "baseline-v2" ? "v2 · 连续操作" : id })),
   ];
-  const [requested, camera] = normalizeSelection(prompt).split(".");
+  const [requested, requestedCamera] = normalizeSelection(prompt).split(".");
   const stable = data.presentation?.mode === "mentor";
   const version = stable
     ? versions.find((v) => v.id === data.presentation?.fixed_prompt_id) || versions.find((v) => v.id === "baseline-v2") || versions[0]
     : versions.find((v) => v.key === requested) || versions[0];
+  // Current caption experiments use camera2. Historical v1 links can still
+  // address their six camera results without adding a misleading selector.
+  const camera = stable || ["v2", "v2_1", "v3"].includes(version.key) ? "camera2" : requestedCamera;
   const models = [
     { key: "qwen", label: data.experiment?.model_label || "Qwen" },
     ...data.runs
@@ -196,10 +202,12 @@ export function ModelComparison({
   const model = models.find((m) => m.key === modelKey) || models[0];
   useEffect(() => { if (model.key !== modelKey) selectModel(model.key); }, [model.key, modelKey, selectModel]);
   useEffect(() => {
-    if (requested !== version.key) change(`${version.key}.${camera}`);
-  }, [requested, version.key, camera]);
-  const modelRuns = data.runs.filter(r => r.model_key === model.key && r.prompt_id === version.id);
+    if (requested !== version.key || requestedCamera !== camera) change(`${version.key}.${camera}`);
+  }, [requested, requestedCamera, version.key, camera, change]);
+  const modelRuns = data.runs.filter(r => r.model_key === model.key && r.prompt_id === version.id)
+    .filter(r=>r.release_id !== "v2_1" || !r.experiment_task_ids || r.experiment_task_ids.includes(`${clip.clip_id}__camera2`));
   const preferred = chooseRun(modelRuns, clip.sample_id, selectedRun);
+  useEffect(()=>{ if(preferred && preferred.id !== selectedRun) selectRun(preferred.id); },[preferred?.id,selectedRun,selectRun]);
   const available = modelRuns
     .filter((r) => !r.sample || r.sample === clip.sample_id)
     .map((run) => ({
@@ -221,11 +229,6 @@ export function ModelComparison({
         onClick={() => selectModel(m.key)}>{cloudLabel}</button>;
     })}
   </div>;
-  const cameraControls = <div className="camera-choice" role="group" aria-label="结果相机">
-    <span className="control-label">相机</span>
-    {Array.from({length:6},(_,i)=><button key={i} aria-label={`查看 camera${i} 结果`}
-      aria-pressed={camera === `camera${i}`} onClick={() => change(`${version.key}.camera${i}`)}>{i}</button>)}
-  </div>;
   return (
     <div className="model-workspace caption-view">
       <div className="prompt-choice">
@@ -235,7 +238,7 @@ export function ModelComparison({
           <select
             aria-label="Prompt 版本"
             value={version.key}
-            onChange={(e) => change(`${e.target.value}.${e.target.value === "v2" ? "camera2" : camera}`)}
+            onChange={(e) => change(`${e.target.value}.${["v2","v2_1","v3"].includes(e.target.value) ? "camera2" : camera}`)}
           >
             {versions.map((v) => (
               <option key={v.key} value={v.key}>
@@ -247,11 +250,10 @@ export function ModelComparison({
         <p>
           {version.key === "v1"
             ? "纯视觉基线：每个原始片段均匀抽取12帧，不使用标注背景或历史，不做窗口汇总。"
-            : version.key === "v2" ? "六部分操作描述或其迭代；不使用标注背景或历史。各运行的采样与输入方式见下方。" : "已导入的实验版本；具体配置以对应运行记录为准。"}
+            : version.key === "v3" ? "10 个首片段 · 2 fps · 最多 5 秒窗口；窗口独立描述，跨窗口仅做文字汇总，无标注背景或历史。" : version.key === "v2_1" ? "整段视频 · 2 fps · 六部分操作描述；不使用标注背景、历史或窗口。" : version.key === "v2" ? "六部分操作描述或其迭代；不使用标注背景或历史。各运行的采样与输入方式见下方。" : "已导入的实验版本；具体配置以对应运行记录为准。"}
         </p>
         </>}
         {modelControls}
-        {cameraControls}
       </div>
       <ModelCaption
         key={`${model.key}/${version.key}`}

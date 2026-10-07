@@ -56,7 +56,7 @@ export function VideoGrid({clip, inventory, expanded, setExpanded}: {
   }
   return <>
     <div className="video-toolbar">
-      <span>{expanded ? "六路相机 · camera2 为主视角" : "camera2"}</span>
+      <span>{expanded ? "六路相机 · 选择 camera2 为主视角进行caption" : "主视角camera2"}</span>
       <button aria-expanded={expanded} aria-controls="camera-videos" onClick={changeMode} disabled={!cameras.length}>
         {expanded ? "收起其他相机" : "展开全部相机"}
       </button>

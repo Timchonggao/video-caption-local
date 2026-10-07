@@ -1,6 +1,7 @@
 """One paid validation call first; only explicit --all expands to five tasks.
 
-Default prepares one local video without calling Ark. No automatic retries/cloud.
+Default uses Base64 and prepares one local video without calling Ark.
+Files transport requires an explicit --config. No automatic retries/cloud.
 Load ~/.config/seed-caption/env before --apply. Existing successes resume.
 """
 import argparse,json,os,subprocess,sys
@@ -9,11 +10,13 @@ PROJECT=Path(__file__).resolve().parents[1]
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--apply',action='store_true');p.add_argument('--all',action='store_true')
-    p.add_argument('--config',type=Path,default=PROJECT/'configs/doubao_seed21_lite_video_r3_files.json')
+    p.add_argument('--config',type=Path,default=PROJECT/'configs/doubao_seed21_lite_video_r3.json')
     p.add_argument('--retry-unknown',action='store_true',help='Explicitly acknowledge a previous uncertain upload/request')
     a=p.parse_args()
     c=json.loads(a.config.read_text())
-    first='sample_01_seg02_sub10__camera2'
+    if not c.get('tasks'):raise ValueError('Configuration must specify at least one task')
+    first='sample_01_seg02_sub10__camera2' if 'sample_01_seg02_sub10__camera2' in c['tasks'] else c['tasks'][0]
+    count=len(c['tasks']) if a.all else 1
     if a.apply and (not os.environ.get('ARK_API_KEY') or os.environ.get('ARK_MODEL')!=c['model']):
         raise ValueError('Load ARK_API_KEY and expected ARK_MODEL on the server; credentials are not printed')
     if a.all and a.apply:
@@ -23,7 +26,7 @@ def main():
         '--sample',c['sample'],'--camera',c['camera'],'--input-mode','video','--sampling-fps',str(c['requested_fps']),
         '--prompt-id',c['prompt_id'],'--prompt',str(PROJECT/c['prompt_file']),'--background','none','--stop-on-error',
         '--max-new-tokens',str(c['max_new_tokens']),'--max-request-bytes',str(c['max_request_bytes']),
-        '--limit','5' if a.all else '1','--max-calls','5' if a.all else '1']
+        '--limit',str(count),'--max-calls',str(count)]
     cmd.extend(['--video-transport',c.get('transport','base64')])
     if c.get('transport') == 'files':
         for key in ['min_frame_tokens','max_frame_tokens','max_video_tokens','file_processing_timeout','file_poll_interval','file_expire_days']:

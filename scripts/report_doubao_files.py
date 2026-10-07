@@ -13,7 +13,7 @@ FIELDS = ['task_id','result_id','caption_status','generated_caption','error','ex
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--run',default='doubao-seed21-lite-sample01-video-r3-files')
+    parser.add_argument('--run',default='doubao-seed21-lite-sample01-files-default-sub01-20261007')
     args=parser.parse_args()
     if not args.run or any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-' for c in args.run):
         parser.error('Invalid run ID')
@@ -39,7 +39,9 @@ def main():
     def number(value):return '未记录' if value is None else f'{value:.2f}'
     lines=['# 豆包 Files API 视频结果','',f'运行：{args.run}；成功 {result["success"]}，失败 {result["failed"]}，目标 {result["expected"]}。',
            '', f'相机 {config.get("camera")}，请求 {config.get("sampling_fps")} fps，Prompt {config.get("prompt_id")}，thinking {config.get("thinking")}，输出上限 {config.get("max_new_tokens")}；生成采样参数保持服务默认。',
-           '预算是请求配置；服务端实际采样帧/尺寸未返回时不作推定。预处理回显核对通过也不等于已经验证了每一帧画面。',
+           ('未设置 min_frame_tokens、max_frame_tokens、max_video_tokens，沿用服务默认视觉处理。'
+            if set(config['file_preprocess_configs']['video']) == {'fps'} else '视觉预算以保存的请求配置为准。'),
+           '服务端实际采样帧和处理尺寸未返回，不作推定；预处理回显通过不等于逐帧画面已核验。',
            '', '|任务|状态|上传秒|文件处理秒|caption请求秒|Files总秒|输入/输出token|',
            '|---|---|---:|---:|---:|---:|---:|']
     for row in rows:

@@ -1,0 +1,10 @@
+{
+  "run_id": "qwen-first10-v3-w5-off-r1",
+  "baseline_run_id": "qwen-full-v2_1-off-r2",
+  "camera": "camera2",
+  "window_seconds": 5,
+  "sampling_fps": 2,
+  "window_prompt_file": "prompts/v3_window_r1.txt",
+  "summary_prompt_file": "prompts/v3_summary_r1.txt",
+  "artifact_subdirectory": "v3_window_off/artifacts"
+}

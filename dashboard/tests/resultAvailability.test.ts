@@ -25,3 +25,11 @@ describe("Result navigation uses actual successful output in the selected scope"
     expect(availableClipIds(fixture(),"qwen","baseline-v2","camera5","low").size).toBe(0);
   });
 });
+
+it("v2.1 falls back to off on later clips and follows sparse thinking scope",()=>{
+  const d=fixture();
+  d.runs=[{...run("new-off","off"),sample:undefined,prompt_id:"baseline-v2-1",release_id:"v2_1",experiment_task_ids:[`${a.clip_id}__camera2`,`${b.clip_id}__camera2`]},
+          {...run("new-low","low"),sample:undefined,prompt_id:"baseline-v2-1",release_id:"v2_1",experiment_task_ids:[`${a.clip_id}__camera2`]}];
+  d.results=[result("new-off",a),result("new-off",b),result("new-low",a)];
+  expect([...availableClipIds(d,"qwen","baseline-v2-1","camera2","new-low")].sort()).toEqual([a.clip_id,b.clip_id]);
+});

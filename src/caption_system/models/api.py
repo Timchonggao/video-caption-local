@@ -86,7 +86,7 @@ class Api:
             headers = {'Authorization': 'Bearer ' + self.key}
         start = time.perf_counter()
         try:
-            response = requests.post(url, headers=headers, json=body, timeout=(30, 240))
+            response = requests.post(url, headers=headers, json=body, timeout=getattr(self, 'request_timeout', (30, 240)))
         except requests.RequestException:
             raise RequestFailure('Provider request outcome unknown; no automatic retry', 'unknown_remote_outcome') from None
         if not response.ok:

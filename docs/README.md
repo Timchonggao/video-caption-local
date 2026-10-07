@@ -1,20 +1,18 @@
 # 当前运行说明
 
-代码、数据读取和 GPU 推理运行在 pku_a800 服务器；Mac 通过 SSH 转发查看本地网页。v1 六相机结果继续保留；当前 v2 仅对 sample_01 的五个 camera2 原始子片段进行参数复测，不自动扩大到全部 24 段。
+代码、数据读取和 GPU 推理运行在 pku_a800；Mac 通过 SSH 转发查看本地网页。v2.1 是整段 2 fps 的展示基线：138 个原始子片段 × camera2，r3 Prompt，无标注背景、历史或窗口。Qwen 168 条已完成；豆包按用户要求停在 94 条成功结果。公开 mentor 看板展示这 262 条成功 caption，豆包 off 缺失位置显示“待生成”；详见 [验收报告](../reports/experiments/v2_1/local-acceptance.md)和[云端发布说明](cloud-migration.md)。
+
+本地保留 v1、v2、v2.1 供迭代比较，并增加已完成的 [v3 首片段窗口试验](v3-window-off.md)。云端由已验收的发布清单固定稳定结果，不显示版本选择；本次 v3 未发布云端。
 
 ## Caption 实验
 
-v1 是纯视觉简短描述：每个原始片段均匀抽取 12 帧，不是 12 fps；不提供标注背景，不传递历史，不做窗口汇总。配置见 configs/sample01_v1.json，Prompt 见 prompts/sample01_baseline_v1.txt。
+- [v2.1 运行](full-v21.md)：任务范围、输入缓存、自动 Base64／Files 和结果记录。
+- [v3 独立窗口试验](v3-window-off.md)：10 个首片段的 Qwen off，5 秒窗口、逐窗口结果与人工对照。
+- [v2 官方方案](qwen38-official-retest.md)：原有五段、6 fps、四档官方参数历史对照。
+- [v1 实验](sample01-experiments.md)：固定 12 帧的六相机基线。
+- [执行与结果保存](harness-usage.md)：任务身份、输入证据、调用预算和续跑。
 
-当前 v2 使用视频＋六部分 r3、6 fps、每帧 512000 像素，采用官方采样方法。保留基础种子 20261006 的关闭思考与 low/medium/xhigh 四档，每档五段，共 20 条；结果与查看方式见 [Qwen 官方方案](qwen38-official-retest.md)。旧贪心思考对照和另一种子结果已清理，早期视频基线仅作为采样证据来源。
-
-从仓库根目录准备一个任务，不执行生成：
-
-```bash
-env/bin/python project/scripts/run_sample01_v1.py
-```
-
-确认输入后加 --apply 生成。完整运行与续跑见 [sample01-experiments.md](sample01-experiments.md)；输入证据、调用预算和结果保存见 [harness-usage.md](harness-usage.md)。修改 Prompt、代码或配置必须建立新运行编号。
+修改 Prompt、采样、代码或配置时建立独立运行，不覆盖历史结果。
 
 ## 本地看板
 
@@ -37,8 +35,10 @@ ssh -F /dev/null -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=60 -o Ser
 ## 工程与后续方向
 
 - [工程契约](caption-engineering.md)：任务身份、输入证据、结果版本与评价绑定。
-- [窗口与汇总](window-v2.md)：后续可选能力，不是当前 v1 配置。
+- [早期窗口设计](window-v2.md)：保留旧设计背景；当前试验以 v3 独立窗口说明为准。
 - [视觉输入实验](caption-input-experiments.md)：后续单因素比较方向。
-- [后续云端发布](cloud-migration.md)：稳定后发布低分辨率展示副本。
+- [云端发布](cloud-migration.md)：当前 v2.1 的低分辨率展示副本与更新流程。
 
-本地继续用于实验迭代，不自动调用闭源 API或发布新实验。云端 mentor 看板固定当前 v2，展示五段的 Qwen 四档和豆包共 25 条，使用低清视频及 JPEG 采样图；更新方式见 [云端说明](cloud-migration.md)。prompts/modules/ 保留升级方向，实际实验文本和哈希保存到 runs/<run_id>/config.json。
+本地继续用于实验迭代，不自动调用闭源 API或发布新实验。云端 mentor 看板通过发布清单固定已验收结果，使用低清视频及 JPEG 采样图；更新方式见 [云端说明](cloud-migration.md)。prompts/modules/ 保留升级方向，实际实验文本和哈希保存到 runs/<run_id>/config.json。
+
+当前公开展示基线：[v2.1 部分结果发布](cloud-migration.md)。当前本地窗口试验：[v3 首片段窗口结果](v3-window-off.md)。

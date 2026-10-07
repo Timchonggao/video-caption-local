@@ -16,7 +16,7 @@ def execute(store, rows, predecessors, config, backend, prompt, options):
         if options.apply and store.uncertain(tid) and not options.retry_unknown:
             print(tid, 'blocked_unknown_remote_outcome', flush=True)
             continue
-        if options.apply and not options.rerun and config.get('experiment_family') == 'official-qwen38-v2' and old.get('caption_status') == 'failed':
+        if options.apply and not options.rerun and (config.get('experiment_family') == 'official-qwen38-v2' or config.get('release_id') == 'v2_1') and old.get('caption_status') == 'failed':
             print(tid,'retained_failed_no_retry',flush=True)
             continue
         record = {k: task[k] for k in ('task_id', 'clip_id', 'sample_id', 'camera_id')}

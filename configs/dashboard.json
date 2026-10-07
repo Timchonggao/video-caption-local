@@ -1,4 +1,13 @@
 {
-  "hidden_runs": ["qwen-sample01-v2-video-r3"],
-  "note": "早期视频基线仅保留为高清采样证据来源，不作为当前 caption 实验选项。"
+  "hidden_runs": [
+    "qwen-sample01-v2-video-r3",
+    "doubao-seed21-lite-sample01-files-default-sub01-20261007",
+    "qwen-full-v2_1-off",
+    "qwen-full-v2_1-low",
+    "qwen-full-v2_1-medium",
+    "qwen-full-v2_1-xhigh",
+    "doubao-seed21-lite-full-v2_1-off",
+    "doubao-seed21-lite-full-v2_1-on"
+  ],
+  "note": "保留历史采样证据、Files 单段验证与 v2.1 时间精度修复前的工程试跑；当前展示使用已修复的正式运行。"
 }

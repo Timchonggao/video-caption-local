@@ -34,13 +34,17 @@ def main():
     p.add_argument('--max-pixels', type=int, help='Legacy alias for --frame-max-pixels')
     p.add_argument('--frame-max-pixels', type=int)
     p.add_argument('--input-mode', choices=['images', 'video'], default='images')
-    p.add_argument('--video-transport', choices=['files', 'base64'], help='Doubao video: Files API by default')
+    p.add_argument('--video-transport', choices=['files', 'base64', 'auto'], help='Doubao video: Files API by default')
     p.add_argument('--min-frame-tokens', type=int, help='Optional Files preprocessing budget: 16–128')
     p.add_argument('--max-frame-tokens', type=int, help='Optional Files preprocessing budget: 128–640')
     p.add_argument('--max-video-tokens', type=int)
     p.add_argument('--file-processing-timeout', type=float, default=300)
     p.add_argument('--file-poll-interval', type=float, default=2)
     p.add_argument('--file-expire-days', type=int, default=7)
+    p.add_argument('--artifact-root',type=Path)
+    p.add_argument('--video-cache-root',type=Path)
+    p.add_argument('--release-id')
+    p.add_argument('--doubao-thinking',choices=['disabled','enabled'],default='disabled')
     p.add_argument('--evidence-run', help='Read frozen frames from a successful prior run')
     p.add_argument('--comparison-group', choices=['A', 'B', 'C', 'D'])
     p.add_argument('--experiment-task-id', action='append', help='Fixed experiment subset, independent of invocation filters')
@@ -121,6 +125,7 @@ def main():
         a.max_request_bytes = (512 if a.provider == 'qwen' else 32) * 1024 * 1024
     if min(a.frames, a.max_pixels, a.max_new_tokens, a.max_calls, a.max_request_bytes) < 1 or a.max_deviation_s < 0 or a.limit is not None and a.limit < 1:
         p.error('Invalid budgets')
+    if a.doubao_thinking=='enabled' and not (a.provider=='doubao' and a.input_mode=='video'):p.error('Doubao thinking requires video provider')
     if a.provider == 'doubao' and a.input_mode == 'video' and (not a.prompt or a.structured or a.contextual or a.background != 'none'):
         p.error('Ark video experiment requires plaintext custom prompt without context/background')
     if a.provider != 'qwen' and not a.model:
@@ -152,6 +157,8 @@ def main():
               'contextual': a.contextual, 'background': a.background, 'context_missing_policy': a.context_missing_policy,
               'code_sha256': {str(f.relative_to(source)): sha(f) for f in sorted(source.rglob('*.py'))},
               'decode_concurrency': 1, 'request_concurrency': 1, 'prepared_queue_limit': 1}
+    if a.artifact_root:config['artifact_root']=str(a.artifact_root.resolve())
+    if a.release_id:config['release_id']=a.release_id
     if sampling:
         config.update(sampling=sampling,reasoning_effort=a.reasoning_effort,preserve_thinking=False if a.no_preserve_thinking else None)
     if a.official_profile:
@@ -184,14 +191,16 @@ def main():
             backend = DoubaoVideo(model,a.max_new_tokens,a.sampling_fps,transport=a.video_transport or 'files',
                 min_frame_tokens=a.min_frame_tokens,max_frame_tokens=a.max_frame_tokens,max_video_tokens=a.max_video_tokens,
                 file_processing_timeout=a.file_processing_timeout,file_poll_interval=a.file_poll_interval,
-                file_expire_days=a.file_expire_days,retry_unknown=a.retry_unknown)
+                file_expire_days=a.file_expire_days,retry_unknown=a.retry_unknown,thinking=a.doubao_thinking,video_cache_root=a.video_cache_root)
             # Video sampling and visual processing are provider-managed. These
             # image-mode defaults never reach Ark and must not describe this run.
             config.pop('frames', None)
             config.pop('max_pixels', None)
-            config.update(frame_max_pixels=None,visual_processing='provider_managed',thinking='disabled',
-                transport='files_api_chat' if backend.transport == 'files' else 'base64_mp4_chat')
-            if backend.transport == 'files':
+            config.update(frame_max_pixels=None,visual_processing='provider_managed',thinking=a.doubao_thinking,
+                thinking_comparison_role='on' if a.doubao_thinking=='enabled' else 'off',
+                transport={'files':'files_api_chat','base64':'base64_mp4_chat','auto':'auto_video_chat'}[backend.transport])
+            if a.video_cache_root:config['video_cache_root']=str(a.video_cache_root.resolve())
+            if backend.transport in ('files','auto'):
                 config.update(file_preprocess_configs=backend.preprocess,file_processing_timeout=a.file_processing_timeout,
                               file_poll_interval=a.file_poll_interval,file_expire_days=a.file_expire_days)
         else:

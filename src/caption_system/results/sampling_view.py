@@ -93,8 +93,9 @@ def sampling_frame(root, run, task, input_id, index):
         raise ValueError('Invalid frame index')
     frame = bundle['frames'][index]
     relative = Path(frame['path'])
-    path = (directory / relative).resolve()
-    if relative.is_absolute() or not relative.parts or relative.parts[0] != 'artifacts' or not path.is_relative_to(directory.resolve()) or path.suffix != '.png':
+    from caption_system.results.artifacts import resolve_artifact
+    path = resolve_artifact(directory, relative)
+    if path.suffix != '.png':
         raise ValueError('Invalid frame path')
     if sha(path) != frame['sha256']:
         raise ValueError('Saved frame changed')

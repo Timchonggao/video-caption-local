@@ -1,0 +1,19 @@
+{
+  "prompt_id": "baseline-v2-1",
+  "prompt_file": "prompts/sample01_v2_r3.txt",
+  "camera": "camera2",
+  "sampling_fps": 2,
+  "doubao_model": "doubao-seed-2-1-lite-260915",
+  "runs": {
+    "qwen": {
+      "off": "qwen-full-v2_1-off-r2",
+      "low": "qwen-full-v2_1-low-r2",
+      "medium": "qwen-full-v2_1-medium-r2",
+      "xhigh": "qwen-full-v2_1-xhigh-r2"
+    },
+    "doubao": {
+      "off": "doubao-seed21-lite-full-v2_1-off-r2",
+      "on": "doubao-seed21-lite-full-v2_1-on-r2"
+    }
+  }
+}

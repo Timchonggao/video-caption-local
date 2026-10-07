@@ -5,7 +5,10 @@ test("six cameras, original intervals, collective playback and collapsible sampl
   await page.addInitScript(() => localStorage.setItem("sidebarCollapsed", "false"));
   await page.goto("/?clip=sample_01_seg01_sub01");
   await expect(page.locator(".camera-tile")).toHaveCount(1);
+  await expect(page.locator(".video-toolbar span")).toHaveText("主视角camera2");
+  await expect(page.getByRole("group", {name:"结果相机"})).toHaveCount(0);
   await page.getByRole("button", {name:"展开全部相机"}).click();
+  await expect(page.locator(".video-toolbar span")).toHaveText("六路相机 · 选择 camera2 为主视角进行caption");
   await expect(page.locator(".camera-tile")).toHaveCount(6);
   await expect(page.locator(".camera-tile h2")).toHaveText([
     "camera0",
@@ -77,7 +80,7 @@ test("model captions and review controls preserve camera identity", async ({
   await page.getByRole("button", { name: "评价此结果" }).click();
   await expect(page.getByLabel("评价相机")).toHaveValue("camera1");
   await expect(page.locator(".review-collapse")).toHaveAttribute("open", "");
-  await page.getByRole("button", { name: "查看 camera0 结果" }).click();
+  await page.goto("/?clip=sample_01_seg01_sub01&prompt=v1.camera0");
   await expect(page.getByLabel("Prompt 版本")).toHaveValue("v1");
   await expect(page.locator(".selected-camera .camera-title")).toHaveText(
     "camera2",
@@ -85,9 +88,9 @@ test("model captions and review controls preserve camera identity", async ({
   await page.getByRole("button", {name:"展开全部相机"}).click();
   await page.locator(".camera-title").nth(1).click();
   await expect(page.getByText("Only camera1 sees this action.")).toHaveCount(0);
-  await page.getByRole("button", {name:"查看 camera1 结果"}).click();
+  await page.goto("/?clip=sample_01_seg01_sub01&prompt=v1.camera1");
   await expect(page.getByText("Only camera1 sees this action.")).toHaveCount(1);
-  await page.getByRole("button", { name: "查看 camera0 结果" }).click();
+  await page.goto("/?clip=sample_01_seg01_sub01&prompt=v1.camera0");
   await expect(page.getByText("Only camera1 sees this action.")).toHaveCount(0);
   await expect(page.locator(".sample-reference")).not.toHaveAttribute(
     "open",
@@ -235,7 +238,7 @@ test("baseline progress, plain captions and persisted sampling evidence", async 
     page.getByText("帧 1 · 0.033 秒", { exact: true }),
   ).toBeVisible();
   await expect(page.getByText("模型输入 768×640", { exact: true })).toHaveCount(0);
-  await page.getByRole("button", { name: "查看 camera0 结果" }).click();
+  await page.goto("/?clip=sample_01_seg01_sub01&prompt=v1.camera0");
   await page.getByText("采样输入", { exact: true }).click();
   await expect(
     page.getByText("此任务尚无保存的采样输入", { exact: true }),
@@ -262,8 +265,10 @@ test("camera2 v2 has 24-task progress and defaults to camera2", async ({ page })
   await expect(page).toHaveURL(/prompt=v2.camera2/);
   await expect(page.getByText("Repeated visible transfers.")).toBeVisible();
   await expect(page.locator(".experiment-progress")).toContainText("1／24");
-  await page.getByRole("button",{name:"查看 camera0 结果"}).click();
-  await expect(page.getByText("此模型尚未生成该相机结果；请选择 camera2。")).toBeVisible();
+  await page.goto("/?clip=sample_01_seg01_sub01&prompt=v2.camera0");
+  await expect(page).toHaveURL(/prompt=v2.camera2/);
+  await expect(page.getByText("Repeated visible transfers.")).toBeVisible();
+  await expect(page.getByRole("group",{name:"结果相机"})).toHaveCount(0);
 });
 
 test("five-task comparison separates experiment and full sample progress", async ({ page }) => {
@@ -484,12 +489,10 @@ test("mentor checkbox is centered below clips without navigation or card badges"
   await page.getByRole("button",{name:"查看 豆包 结果"}).click();
   await expect(page.getByText("Doubao ready",{exact:true})).toBeVisible();
   await expect(page.locator(".clip-chip")).toHaveCount(1);
-  await page.getByRole("button",{name:"查看 camera0 结果"}).click();
-  await expect(page.getByText("当前样本暂无此模型和相机的结果片段。",{exact:true})).toBeVisible();
+  await expect(page.getByRole("group",{name:"结果相机"})).toHaveCount(0);
   await expect(page.getByLabel("仅看有结果")).toBeVisible();
   await page.getByLabel("仅看有结果").uncheck();
   await expect(page.locator(".clip-chip")).toHaveCount(24);
-  await page.getByRole("button",{name:"查看 camera2 结果"}).click();
   await page.getByLabel("仅看有结果").check();
   await page.getByRole("button",{name:/sample_02 家庭服务/}).click();
   await expect(page.getByText("当前样本暂无此模型和相机的结果片段。",{exact:true})).toBeVisible();
@@ -510,9 +513,8 @@ test("mentor sampling is concise and configuration stays inside equal-sized disc
   await page.route("**/TEST-FRAME-*.png",async route=>route.fulfill({contentType:"image/png",body:Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aT5sAAAAASUVORK5CYII=","base64")}));
   await page.goto("/?clip=sample_01_seg02_sub01");
   await expect(page.getByText("Visible operation.",{exact:true})).toBeVisible();
-  const model=await page.getByRole("group",{name:"模型",exact:true}).boundingBox();
-  const cameras=await page.getByRole("group",{name:"结果相机",exact:true}).boundingBox();
-  expect(model!.y+model!.height).toBeLessThan(cameras!.y);
+  await expect(page.getByRole("group",{name:"模型",exact:true})).toBeVisible();
+  await expect(page.getByRole("group",{name:"结果相机",exact:true})).toHaveCount(0);
   await expect(page.getByText(/每帧像素预算 512000/)).toHaveCount(0);
   await expect(page.locator(".experiment-progress")).toHaveCount(0);
   const sampling=page.locator(".sampling-input > summary"),resources=page.locator(".caption-details > summary");
@@ -538,8 +540,8 @@ test("local view keeps experiments with shared controls and concise high-resolut
   await page.goto("/?clip=sample_01_seg02_sub01&prompt=v2.camera2");
   await expect(page.getByLabel("Prompt 版本").locator("option")).toHaveCount(2);
   await expect(page.locator(".experiment-progress")).toContainText("已生成 1／1");
-  const model=await page.getByRole("group",{name:"模型",exact:true}).boundingBox(),camera=await page.getByRole("group",{name:"结果相机",exact:true}).boundingBox();
-  expect(model!.y+model!.height).toBeLessThan(camera!.y);
+  await expect(page.getByRole("group",{name:"模型",exact:true})).toBeVisible();
+  await expect(page.getByRole("group",{name:"结果相机",exact:true})).toHaveCount(0);
   await expect(page.locator(".clip-filter-footer").getByLabel("仅看有结果")).toBeVisible();
   await page.getByRole("button",{name:"选择思考模式 low",exact:true}).click();
   await expect(page.getByText("Caption LOCAL-low",{exact:true})).toBeVisible();
@@ -553,4 +555,35 @@ test("local view keeps experiments with shared controls and concise high-resolut
   await expect(page.getByText(/图片为保存的高清抽帧/)).toBeVisible();
   await expect(page.getByText("帧 1 · 0.033 秒",{exact:true})).toBeVisible();
   await expect(page.getByText(/采样证据复用自：|视频输入时间映射：/)).toHaveCount(0);
+});
+
+test("v2.1 scopes thinking modes to first clips for Qwen and Doubao",async({page})=>{
+  await page.route("**/api/clips",async route=>{
+    const response=await route.fetch();const data=await response.json();
+    const first="sample_01_seg01_sub01__camera2",later="sample_01_seg01_sub02__camera2";
+    data.runs=[...['off','low','medium','xhigh'].map(mode=>({id:`V21-Q-${mode}`,model_key:'qwen',model_name:'Qwen',model_label:'Qwen',prompt_id:'baseline-v2-1',release_id:'v2_1',official_profile:mode,experiment_family:'official-qwen38-v2',seed_index:1,camera:'camera2',sampling_fps:2,input_mode:'video',experiment_task_ids:mode==='off'?[first,later]:[first]})),
+      ...['off','on'].map(mode=>({id:`V21-D-${mode}`,model_key:'doubao',model_name:'doubao-seed-2-1-lite-260915',model_label:'豆包',prompt_id:'baseline-v2-1',release_id:'v2_1',thinking_comparison_role:mode,camera:'camera2',sampling_fps:2,input_mode:'video',experiment_task_ids:mode==='off'?[first,later]:[first]}))];
+    data.results=data.runs.flatMap((run:any)=>run.experiment_task_ids.map((tid:string)=>({run_id:run.id,task_id:tid,clip_id:tid.split('__')[0],camera_id:'camera2',caption_status:'success',generated_caption:`caption ${run.id} ${tid}`,result_id:`RESULT-${run.id}-${tid}`})));
+    await route.fulfill({json:data});
+  });
+  await page.goto('/?clip=sample_01_seg01_sub01');
+  await expect(page.getByLabel('Prompt 版本')).toHaveValue('v2_1');
+  await expect(page.getByRole('group',{name:'思考模式',exact:true}).getByRole('button')).toHaveCount(4);
+  await page.getByRole('button',{name:'选择思考模式 low',exact:true}).click();
+  await page.locator('.clip-chip').nth(1).click();
+  await expect(page.getByRole('group',{name:'思考模式',exact:true}).getByRole('button')).toHaveCount(1);
+  await expect(page.getByText('caption V21-Q-off sample_01_seg01_sub02__camera2',{exact:true})).toBeVisible();
+  await page.locator('.clip-chip').first().click();
+  await page.getByRole('button',{name:'查看 豆包 结果',exact:true}).click();
+  await expect(page.getByRole('group',{name:'思考模式',exact:true}).getByRole('button')).toHaveCount(2);
+  await page.getByRole('button',{name:'选择思考模式 on',exact:true}).click();
+  await expect(page.getByText('caption V21-D-on sample_01_seg01_sub01__camera2',{exact:true})).toBeVisible();
+  await page.getByRole('button',{name:'并排',exact:true}).click();
+  await expect(page.getByRole('region',{name:'thinking 开关对照'})).toBeVisible();
+  await page.locator('.clip-chip').nth(1).click();
+  await expect(page.getByRole('group',{name:'思考模式',exact:true}).getByRole('button')).toHaveCount(1);
+  await expect(page.getByRole('region',{name:'thinking 开关对照'})).toHaveCount(0);
+  await expect(page.getByText('caption V21-D-off sample_01_seg01_sub02__camera2',{exact:true})).toBeVisible();
+  await page.locator('.clip-chip').first().click();
+  await expect(page.getByRole('region',{name:'thinking 开关对照'})).toHaveCount(0);
 });

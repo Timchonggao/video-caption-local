@@ -69,3 +69,22 @@ class StoreTests(unittest.TestCase):
             self.assertEqual([r['id'] for r in runs], ['official-fixture'])
             self.assertEqual(results[0]['result_id'], result_id)
             self.assertTrue((Path(root) / 'qwen-sample01-v2-video-r3/results.jsonl').is_file())
+
+    def test_archived_files_result_keeps_identity_without_web_choice(self):
+        from caption_system.results.repository import load_runs
+        with tempfile.TemporaryDirectory() as root:
+            config = {'version': VERSION, 'model_key': 'doubao', 'model_name': 'fixture',
+                      'model_label': '豆包', 'prompt_id': 'baseline-v2'}
+            files_id = 'doubao-seed21-lite-sample01-files-default-sub01-20261007'
+            archive = RunStore(files_id, config, self.tasks, root)
+            archive.save(self.record())
+            archive.close()
+            base64_id = 'doubao-seed21-lite-sample01-video-r3'
+            current = RunStore(base64_id, config, self.tasks, root)
+            current.save(self.record())
+            result_id = current.records[self.tasks[0]['task_id']]['result_id']
+            current.close()
+            runs, results = load_runs(self.tasks, Path(root))
+            self.assertEqual([r['id'] for r in runs], [base64_id])
+            self.assertEqual([(r['run_id'], r['result_id']) for r in results], [(base64_id, result_id)])
+            self.assertTrue((Path(root) / files_id / 'results.jsonl').is_file())

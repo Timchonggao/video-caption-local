@@ -488,14 +488,10 @@ main.sidebar-collapsed {
   font-size: 12px;
 }
 
-.camera-choice { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
-.camera-choice button { padding: 6px 12px; }
-.camera-choice button[aria-pressed="true"] { background: #dcebdc; border-color: #658d70; }
 .camera-tile.selected-camera { outline: 2px solid #658d70; outline-offset: -2px; }
 .camera-title { border: 0; background: transparent; padding: 0; color: inherit; font: inherit; }
 .model > select { flex-shrink: 0; width: 100%; margin-bottom: 8px; }
 
-.camera-choice .model-choice { display: flex; align-items: center; gap: 8px; margin-left: auto; }
 
 
 .model-caption { min-width: 0; }
@@ -548,10 +544,8 @@ main.sidebar-collapsed {
 .clip-filter-footer input { width:16px; height:16px; }
 .caption-view .prompt-choice { display:flex; flex-direction:column; gap:14px; padding-bottom:16px; }
 .caption-view .model-choice { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-left:0; justify-content:flex-start; }
-.caption-view .camera-choice { justify-content:flex-start; }
 .caption-view .model-choice button { padding:9px 14px; font-size:13px; }
 .caption-view .model-choice button[aria-pressed="true"] { background:#dfeedd; border-color:#88ae91; color:#315d45; }
-.caption-view .camera-choice button { min-width:36px; padding:7px 10px; }
 .caption-view .control-label { min-width:32px; font-size:13px; color:#6f8074; }
 .caption-mode-controls { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:0 0 16px; margin:0 0 16px; border-bottom:1px solid #e0e5dd; }
 .caption-mode-controls .control-group { display:flex; align-items:center; flex-wrap:wrap; gap:10px; }

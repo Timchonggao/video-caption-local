@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 import type { Run, Result } from "../types";
-import { OFFICIAL_MODES, officialSeedOne, ThinkingComparison } from "./ThinkingComparison";
+import { OFFICIAL_MODES, modeEntries, modeKey, modeLabel, ThinkingComparison } from "./ThinkingComparison";
 import { ResourceMetrics } from "./ResourceMetrics";
 import { SamplingInput } from "./SamplingInput";
 import { InputConfiguration } from "./InputConfiguration";
@@ -17,15 +17,16 @@ export function CaptionPanel({ entries, run, value, task, camera, review, select
   experimentProgress?: ReactNode;
 }) {
   const [compare, setCompare] = useState(false);
-  const official = officialSeedOne(entries);
-  const canCompare = official.some(entry => entry.run.official_profile === "off")
-    && official.some(entry => entry.run.official_profile !== "off");
+  useEffect(()=>setCompare(false),[task]);
+  const official = modeEntries(entries);
+  const canCompare = official.some(entry => modeKey(entry.run) === "off")
+    && official.some(entry => modeKey(entry.run) !== "off");
   const structured = Boolean(value?.annotation && typeof value.annotation === "object"
     && ["actions", "entities", "state_changes", "uncertainties"].some(key => Array.isArray((value.annotation as Record<string, unknown>)[key])));
   function showComparison() {
-    if (run?.official_profile === "off") {
-      const target = official.find(entry => entry.run.official_profile === "medium")
-        || official.find(entry => entry.run.official_profile !== "off");
+    if (run && modeKey(run) === "off") {
+      const target = official.find(entry => modeKey(entry.run) === "medium")
+        || official.find(entry => modeKey(entry.run) !== "off");
       if (target) selectRun(target.run.id);
     }
     setCompare(true);
@@ -36,13 +37,13 @@ export function CaptionPanel({ entries, run, value, task, camera, review, select
         <span className="control-label">思考模式</span>
         <div className="segmented-controls">
           {official.map(entry => <button key={entry.run.id}
-            aria-label={`选择思考模式 ${entry.run.official_profile}`}
+            aria-label={`选择思考模式 ${modeKey(entry.run)}`}
             aria-pressed={run?.id === entry.run.id}
-            title={OFFICIAL_MODES.find(mode => mode.key === entry.run.official_profile)?.label}
+            title={modeLabel(entry.run)}
             onClick={() => {
               selectRun(entry.run.id);
-              if (entry.run.official_profile === "off") setCompare(false);
-            }}>{entry.run.official_profile === "off" ? "关闭思考" : entry.run.official_profile}</button>)}
+              if (modeKey(entry.run) === "off") setCompare(false);
+            }}>{modeLabel(entry.run)}</button>)}
         </div>
       </div>
       {canCompare && <div className="control-group" role="group" aria-label="查看方式">
@@ -55,7 +56,7 @@ export function CaptionPanel({ entries, run, value, task, camera, review, select
     </div>}
     {experimentProgress}
     {compare && canCompare ? <ThinkingComparison entries={entries} camera={camera}
-      review={review} task={task} selectedEffort={run?.official_profile || "medium"}/>
+      review={review} task={task} selectedEffort={run ? modeKey(run) : "medium"}/>
     : <div className="model-output" key={`${camera}/${run?.id}`}>
       <p className="caption-text">{value?.caption_status === "success" ? value.generated_caption
         : value?.caption_status === "failed" ? `生成失败：${value.error || "请重试"}`

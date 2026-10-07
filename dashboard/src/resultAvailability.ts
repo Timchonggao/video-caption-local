@@ -7,6 +7,7 @@ export function chooseRun(runs: Run[], sample: string, preferredId: string): Run
     || (preferred?.official_profile ? candidates.find(run =>
       run.official_profile === preferred.official_profile && run.seed_index === preferred.seed_index) : undefined)
     || candidates.find(run => run.official_profile === "off" && run.seed_index === 1)
+    || candidates.find(run => run.thinking_comparison_role === "off")
     || candidates.find(run => run.comparison_group === "C")
     || candidates.at(-1);
 }
@@ -15,9 +16,11 @@ export function availableClipIds(data: Data, model: string, prompt: string, came
   let runs = data.runs.filter(run => run.model_key === model && run.prompt_id === prompt);
   const official = runs.filter(run => run.experiment_family === "official-qwen38-v2" && run.seed_index === 1);
   if (official.length) runs = official;
-  const samples = new Map(data.clips.map(clip => [clip.clip_id, clip.sample_id]));
-  const selected = new Map([...new Set(samples.values())].map(sample => [sample, chooseRun(runs, sample, preferredId)?.id]));
+  const selected = new Map(data.clips.map(clip => {
+    const scope=runs.filter(run=>run.release_id !== "v2_1" || !run.experiment_task_ids || run.experiment_task_ids.includes(`${clip.clip_id}__camera2`));
+    return [clip.clip_id,chooseRun(scope,clip.sample_id,preferredId)?.id];
+  }));
   return new Set(data.results.filter(result => result.caption_status === "success"
-    && result.camera_id === camera && result.run_id === selected.get(samples.get(result.clip_id) || ""))
+    && result.camera_id === camera && result.run_id === selected.get(result.clip_id))
     .map(result => result.clip_id));
 }

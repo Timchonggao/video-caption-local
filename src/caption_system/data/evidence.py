@@ -35,8 +35,11 @@ def read_evidence(root, run, input_id, task, max_deviation_s):
         raise ValueError('Source media changed')
     frames, metadata = [], []
     for detail in bundle['frames']:
-        path = (directory / detail['path']).resolve()
-        if not path.is_relative_to(directory) or path.suffix != '.png' or sha(path) != detail['sha256']:
+        from caption_system.results.artifacts import resolve_artifact
+        relative = Path(detail['path'])
+        path = resolve_artifact(directory, relative) if relative.parts and relative.parts[0] == 'artifacts' else (directory / relative).resolve()
+        if (relative.is_absolute() or (relative.parts[0] != 'artifacts' and not path.is_relative_to(directory))
+                or path.suffix != '.png' or sha(path) != detail['sha256']):
             raise ValueError('Source evidence image changed or path invalid')
         if not interval[0] <= detail['source_time_s'] < interval[1] or abs(detail['deviation_s']) > max_deviation_s:
             raise ValueError('Invalid source frame time')

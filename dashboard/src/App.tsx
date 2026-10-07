@@ -20,6 +20,7 @@ export function App() {
       normalizeSelection(new URLSearchParams(location.search).get("prompt")),
     );
   const [expandedVideos, setExpandedVideos] = useState(false);
+  const [defaultPromptPending, setDefaultPromptPending] = useState(!new URLSearchParams(location.search).get("prompt"));
   const [modelKey, setModelKey] = useState("qwen"),
     [selectedRun, setSelectedRun] = useState(""),
     [onlyResults, setOnlyResults] = useState(false);
@@ -36,10 +37,15 @@ export function App() {
   const { data, inventory, error, reload } = useDashboard(
     selected.split("_seg")[0] || undefined,
   );
+  useEffect(() => {
+    if (!defaultPromptPending || !data) return;
+    if (data.runs.some(run => run.release_id === "v2_1")) setPrompt("v2_1.camera2");
+    setDefaultPromptPending(false);
+  }, [data, defaultPromptPending]);
   const clips = data?.clips || [],
     promptKey = prompt.split(".")[0],
     camera = prompt.split(".")[1],
-    promptId = data?.presentation?.fixed_prompt_id || (promptKey === "v1" ? "baseline-v1" : promptKey === "v2" ? "baseline-v2" : promptKey),
+    promptId = data?.presentation?.fixed_prompt_id || (promptKey === "v1" ? "baseline-v1" : promptKey === "v2" ? "baseline-v2" : promptKey === "v2_1" ? "baseline-v2-1" : promptKey === "v3" ? "v3-window-r1" : promptKey),
     available = data ? availableClipIds(data, modelKey, promptId, camera, selectedRun) : new Set<string>(),
     filtered = clips.filter(
       (c) =>
